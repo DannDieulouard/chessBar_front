@@ -1,0 +1,60 @@
+/* Configuration de la nav bar */
+
+.menu {
+    background-color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu li {
+    margin: 1rem;
+}
+
+.menu a {
+    color: black;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+.menu a:hover {
+    color: goldenrod;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+/* Configuration du header*/
+
+header {
+    height: 420px;
+    background-image: url(../../components/public/images/header/newbanner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    background-position: center;
+    flex-direction: column;
+    align-items:flex-start;
+    flex-wrap: wrap;
+
+}
+.bannerlogo {
+    background-image: url(../../components/public/images/header/logoSD.png);
+    width: 25%;
+    height: 25%;
+    background-size: cover;
+    text-align: center;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}
+
+header h1 {
+    color: white;
+    font-size: 25px;
+    position: relative;
+    text-align: center;
+    font-weight: bolder;
+    margin-top: 20px;
+    padding-left: 4px;
+}

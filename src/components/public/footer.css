@@ -1,0 +1,71 @@
+/* Configuration de la newsletter */
+
+.abonnez {
+    background-color:#292b2c ;
+    color:white;
+    height: 150px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+h4 {
+    font-size: 1.2rem;
+    top:40px
+}
+
+#email {
+    top: 50px;
+    border-radius: 5%;
+    padding: 10px 25px;
+}
+#btn-abonner { 
+    position: relative;
+    padding: 10px 25px;
+    background-color: #bb8e6b;
+    color: white;
+    text-align: center;
+    border-radius: 10%;
+}
+
+#btn-abonner:hover {
+    background-color: goldenrod;
+}
+
+/* Configuration du footer */
+
+.pieddepage {
+    background-color: white;
+    color: black;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.pieddepage a {
+    color: black;
+}
+
+.pieddepage img {
+    padding: 1rem;
+    width: 10%;
+}
+
+.pieddepage {
+    display: flex;
+    padding: 0;
+}
+
+.pieddepage li a {
+    padding: 0 1rem;
+    color: black;
+}
+
+footer                                                                                     .pieddepage li a:hover {
+    padding: 0 1rem;
+    color: goldenrod;
+}
