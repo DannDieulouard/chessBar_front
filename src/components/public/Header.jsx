@@ -8,7 +8,7 @@ const Header = () => {
           <nav>
             <ul className="menu">
               <li><Link to="/">ACCUEIL</Link></li>
-              <li><Link to="/bars">Liste des bars</Link></li>
+              <li><Link to="/bars">BARS</Link></li>
               <li><Link to="/login">Se connecter</Link></li>
               <li><Link to="/logout">Se déconnecter</Link></li>
               <li><Link to="/signup">Créer un compte</Link></li>
