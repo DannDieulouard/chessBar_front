@@ -1,4 +1,4 @@
-import "../public/footer.css";
+import "../public/css/footer.css";
 
 const Footer = () => {
 
@@ -6,11 +6,10 @@ const Footer = () => {
         <>
         <footer>
                 <ul className="pieddepage">
-                    <li><a href="#" className="#nav1">Mentions Légales</a></li>
-                    <li><a href="#" className="#nav1">Politique de confidentialité</a></li>
-                    <li><a href="#" className="#nav1">Préférences en matière de cookies</a></li>
-                    <li><a href="#" className="#nav1">Public ciblé</a></li>
-                    <li><a href="#" className="#nav1">Recrutement</a></li>
+                <div class="footer_logo"></div>
+                    <li><a href="#" className="#nav1">CONDITIONS GENERALES</a></li>
+                    <li><a href="#" className="#nav1">PLAN DU SITE</a></li>
+                    <li><a href="#" className="#nav1">COOKIES</a></li>
                 </ul>
         </footer>
         </>

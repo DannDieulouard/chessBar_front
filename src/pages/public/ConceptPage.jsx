@@ -1,15 +1,15 @@
+import Concept from "../../components/public/Concept";
 import Footer from "../../components/public/Footer";
 import Header from "../../components/public/Header";
-import Home from "../../components/public/Home";
 
-const HomePage = () => {
+const ConceptPage = () => {
     return (
       <>
         <Header />
-        <Home />
+        <Concept />
         <Footer />
       </>
     );
   };
   
-  export default HomePage;
+  export default ConceptPage;

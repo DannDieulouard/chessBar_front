@@ -1,0 +1,84 @@
+/* Configuration du main */
+
+.survivez {
+    margin-top: 50px;
+    margin-left: 240px;
+    width: 900px;
+    height: 110px;
+    background-color: white;
+    margin-bottom: 150px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ensavoirplus {
+    width: 90px;
+    height: 20px;
+    padding: 10px 20px;
+    background-color: #bb8e6b;
+    color: white;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.ensavoirplus:hover {
+    background-color: goldenrod;
+}
+
+.actualites {
+
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+
+h2 {
+    margin-top: 40px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.features {
+    
+    width: 300px;
+    height: 500px;
+    background-color: white;
+    border: 1px solid black;
+    top: 5px;  
+    position: relative;
+    margin-block-end: 50px;
+    background-color: #282725;
+    margin-left: 20px;
+
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    line-height: 1.5rem;
+}
+
+.features h3 {
+    margin-top: 30px;
+    margin-left: 10px;
+}
+
+.features p {
+    text-align:left;
+    position:relative;
+    top: 10px;
+    left: 10px;
+    right: 20px;
+    color: white;
+    text-align: left;
+}

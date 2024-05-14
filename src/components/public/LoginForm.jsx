@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom"
 
 const LoginForm = () => {
   const [message, setMessage] = useState("");
@@ -50,6 +50,7 @@ const LoginForm = () => {
 
         <input type="submit" />
       </form>
+      <p>Pas encore de compte? Veuillez en créer un ici : <Link to="/signup">Je crée mon compte</Link></p>
     </>
   );
 };

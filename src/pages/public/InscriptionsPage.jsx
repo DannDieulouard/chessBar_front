@@ -1,15 +1,15 @@
 import Footer from "../../components/public/Footer";
 import Header from "../../components/public/Header";
-import Home from "../../components/public/Home";
+import Inscriptions from "../../components/public/Inscriptions";
 
-const HomePage = () => {
+const InscriptionsPage = () => {
     return (
       <>
         <Header />
-        <Home />
+        <Inscriptions />
         <Footer />
       </>
     );
   };
   
-  export default HomePage;
+  export default InscriptionsPage;

@@ -1,19 +1,21 @@
 /* Configuration du footer */
 
 .pieddepage {
-    background-color: white;
+    background-color: rgb(230, 230, 230);
     color: black;
-    height: 60px;
+    height: 90px;
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     flex-direction: row;
     list-style-type: none;
-    text-decoration: none;
 }
 
 .pieddepage a {
     color: black;
+    font-weight: bold;
+    text-decoration: none;
+    padding-right: 1rem;
 }
 
 .pieddepage img {
@@ -32,7 +34,18 @@
     text-decoration: none;
 }
 
-footer                                                                                     .pieddepage li a:hover {
+.pieddepage li a:hover {
     padding: 0 1rem;
     color: goldenrod;
+}
+
+.footer_logo {
+    background-image: url(../../public/images/header/logoSD.png);
+    width: 4%;
+    height: 4%;
+    background-size: cover;
+    display: flex;
+    justify-content: left;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
 }

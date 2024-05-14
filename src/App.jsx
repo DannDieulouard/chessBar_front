@@ -9,14 +9,19 @@ import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import AdminListBarsPage from "./pages/admin/AdminListBarsPage";
 import AdminCreateBarPage from "./pages/admin/AdminCreateBarPage";
 import AdminUpdateBarPage from "./pages/admin/AdminUpdateBarPage";
+import ConceptPage from "./pages/public/ConceptPage";
+import InscriptionsPage from "./pages/public/InscriptionsPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/Bars" element={<ListBarsPage />} />
+        <Route path="/concept" element={<ConceptPage />} />
+        <Route path="/bars" element={<ListBarsPage />} />
         <Route path="/bars/details/:id" element={<DetailsBarPage />} />
+        <Route path="/inscriptions" element={<InscriptionsPage />} />
+
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/logout" element={<LogoutPage />} />
