@@ -5,18 +5,32 @@ const SignupForm = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  const handleSignupSubmit = (event) => {
-    event.preventDefault();
+  const handleSignupSubmit = (e) => {
+    e.preventDefault();
 
-    const username = event.target.username.value;
-    const password = event.target.password.value;
-
+    const surname = e.target.surname.value
+    const name = e.target.name.value
+    const postCode = e.target.postCode.value
+    const city = e.target.city.value
+    const email = e.target.email.value
+    const phone = e.target.phone.value
+    const username = e.target.username.value
+    const password = e.target.password.value
+    const howChessbar = e.target.howChessbar.value
+    
     const loginData = {
-      username: username,
-      password: password,
-    };
+          surname: surname,
+          name: name,
+          city : city,
+          email: email,
+          postCode: postCode,
+          phone: phone,
+          username: username,
+          password: password,
+          howChessbar: howChessbar
+        };
 
-    const loginDataJson = JSON.stringify(loginData);
+        const loginDataJson = JSON.stringify(loginData)
 
     fetch("http://localhost:5000/api/users/signup", {
       method: "POST",
@@ -39,28 +53,76 @@ const SignupForm = () => {
       <h2>Créez votre nouveau compte : </h2>
       <p>{message}</p>
       <form onSubmit={handleSignupSubmit}>
-        <label>
-          Nom de l'utilisateur
-          <input name="username" type="text" />
-        </label>
-
-        <label>
-          Mot de passe
-          <input name="password" type="password" />
-        </label>
-
-        <label>
-          Adresse
-          <input name="adress" type="json" />
-        </label>
-
-        <label>
-          Email
-          <input name="email" type="text" />
-        </label>
-
-        <input type="submit" />
-      </form>
+            <div>
+              <label>
+                Prénom
+                <input type="text" name="surname" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Nom
+                <input type="text" name="name" />
+              </label>
+            </div>
+            <div>
+            </div>
+            <div>
+              <label>
+                Numéro de rue
+                <input type="number" name="number" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Rue
+                <input type="text" name="street" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Code postal
+                <input type="text" name="postCode" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Ville
+                <input type="text" name="city" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Email
+                <input type="email" name="email" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Numéro de téléphone
+                <input type="number" name="phone"/>
+              </label>
+            </div>
+            <div>
+              <label>
+                Pseudo Chess.com / Lichess
+                <input type="text" name="username" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Mot de passe
+                <input type="password" name="password" />
+              </label>
+            </div>
+            <div>
+              <label>
+                Comment avez-vous connu ChessBar ?
+                <input type="text" name="howChessbar" />
+              </label>
+            </div>
+            <input type="submit" value="Créer" />
+          </form>
     </>
   );
 };
