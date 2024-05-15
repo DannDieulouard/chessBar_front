@@ -69,18 +69,6 @@ const SignupForm = () => {
             </div>
             <div>
               <label>
-                Numéro de rue
-                <input type="number" name="number" />
-              </label>
-            </div>
-            <div>
-              <label>
-                Rue
-                <input type="text" name="street" />
-              </label>
-            </div>
-            <div>
-              <label>
                 Code postal
                 <input type="text" name="postCode" />
               </label>
