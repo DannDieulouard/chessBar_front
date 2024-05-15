@@ -1,0 +1,8 @@
+.adminDashboard {
+    background-color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}

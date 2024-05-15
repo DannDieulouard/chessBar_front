@@ -1,0 +1,36 @@
+/* Configuration de la nav bar */
+
+.menuAdmin {
+    background-color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.menuAdmin li {
+    margin: 1rem;
+}
+
+.menuAdmin a {
+    color: black;
+    font-weight: bold;
+    padding-right: 1rem;
+    text-decoration: none;
+}
+
+.menuAadmin a:hover {
+    color: goldenrod;
+    font-weight: bold;
+    padding-right: 1rem;
+}
+
+.nav_logo {
+    background-image: url(../../public/images/header/logoSD.png);
+    width: 4%;
+    height: 4%;
+    background-size: cover;
+    padding-left: 2rem;
+    padding-bottom: 2rem;
+}

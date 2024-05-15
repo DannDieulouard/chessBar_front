@@ -1,20 +1,21 @@
 import { Link } from "react-router-dom";
+import "../admin/css/adminHeader.css";
 
 const AdminHeader = () => {
   return (
-    <header>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/admin/">Dashboard</Link>
-            <Link to="/admin/bars">Gérer les bars</Link>
-            <Link to="/admin/bars/create">Créer un bar</Link>
-            <Link to="/signup">Créer un compte</Link>
-            <Link to="/logout">Se déconnecter</Link>
-          </li>
+    <>
+    <nav>
+        <ul className="menuAdmin">
+        <div className="nav_logo"></div>
+          <li><Link to="/admin/">Dashboard</Link></li>
+          <li><Link to="/admin/bars/create">Créer un bar</Link></li>
+          <li><Link to="/admin/inscriptions/create">Créer un créneau d'inscription</Link></li>
+          <li><Link to="/admin/standings/create">Créer un classement</Link></li>
+          <li><Link to="/signup">Créer un compte</Link></li>
+          <li><Link to="/logout">Se déconnecter</Link></li>
         </ul>
       </nav>
-    </header>
+    </>
   );
 };
 

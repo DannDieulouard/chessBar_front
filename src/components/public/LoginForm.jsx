@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom"
+import { useVerifyToken } from "../../utils/authGuard";
 
 const LoginForm = () => {
   const [message, setMessage] = useState("");
@@ -27,9 +28,18 @@ const LoginForm = () => {
       credentials: "include",
     }).then((response) => {
       if (response.status === 200) {
-        navigate('/bars')
-      } else {
+        navigate('/')
+      } 
+      else {
         setMessage("Connexion refusée");
+      }
+    })
+    .then((decodedToken) => {
+      if (decodedToken === 1) {
+        navigate('/admin')
+      } 
+      else {
+        navigate('/');
       }
     });
   };
