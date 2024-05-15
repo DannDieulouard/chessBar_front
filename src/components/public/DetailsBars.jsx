@@ -3,9 +3,9 @@ import { useState, useEffect } from "react";
 
 const DetailsBar = () => {
   const { id } = useParams();
-
   const [bar, setBar] = useState(null);
 
+  
   useEffect(() => {
     fetch("http://localhost:5000/api/bars/" + id, {
       method: "GET",
@@ -22,8 +22,6 @@ const DetailsBar = () => {
         setBar(bar);
       });
   }, []);
-
-  console.log(bar)
 
   return (
     <main>

@@ -11,6 +11,8 @@ import AdminCreateBarPage from "./pages/admin/AdminCreateBarPage";
 import AdminUpdateBarPage from "./pages/admin/AdminUpdateBarPage";
 import ConceptPage from "./pages/public/ConceptPage";
 import InscriptionsPage from "./pages/public/InscriptionsPage";
+import StandingsPage from "./pages/public/StandingsPage";
+import RulesPage from "./pages/public/RulesPages";
 
 function App() {
   return (
@@ -21,7 +23,8 @@ function App() {
         <Route path="/bars" element={<ListBarsPage />} />
         <Route path="/bars/details/:id" element={<DetailsBarPage />} />
         <Route path="/inscriptions" element={<InscriptionsPage />} />
-
+        <Route path="/classements" element={<StandingsPage />} />
+        <Route path="/reglement" element={<RulesPage />} />
 
         <Route path="/login" element={<LoginPage />} />
         <Route path="/logout" element={<LogoutPage />} />
