@@ -1,15 +1,15 @@
 import Footer from "../../components/public/Footer";
 import Header from "../../components/public/Header";
-import Inscriptions from "../../components/public/Inscriptions";
+import Tournaments from "../../components/public/Tournaments";
 
-const InscriptionsPage = () => {
+const TournamentsPage = () => {
     return (
       <>
         <Header />
-        <Inscriptions />
+        <Tournaments />
         <Footer />
       </>
     );
   };
   
-  export default InscriptionsPage;
+  export default TournamentsPage;

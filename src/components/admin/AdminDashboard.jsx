@@ -10,9 +10,10 @@ const AdminDashboard = () => {
       <h2>Bienvenue admin ! </h2>
       <section>
             <article className="adminDashboard">
-              <button><Link to={`/admin/bars`}>Lien vers la liste des bars</Link></button>
-              <button><Link to={`/admin/inscriptions`}>Lien vers la liste des créneaux d'inscription</Link></button>
-              <button><Link to={`/admin/standings`}>Lien vers la liste des classements</Link></button>
+              <button><Link to={`/admin/users`}>Gestion des utilisateurs</Link></button>
+              <button><Link to={`/admin/bars`}>Gestion des bars</Link></button>
+              <button><Link to={`/admin/inscriptions`}>Gestion des tournois</Link></button>
+              <button><Link to={`/admin/standings`}>Gestion des classements</Link></button>
             </article>
       </section>
     </main>
