@@ -10,7 +10,7 @@ const AdminHeader = () => {
           <li><Link to="/admin/">Dashboard</Link></li>
           <li><Link to="/admin/bars/create">Créer un bar</Link></li>
           <li><Link to="/admin/inscriptions/create">Créer un créneau d'inscription</Link></li>
-          <li><Link to="/admin/standings/create">Créer un classement</Link></li>
+          <li><Link to="/admin/rankings/create">Créer un classement</Link></li>
           <li><Link to="/signup">Créer un compte</Link></li>
           <li><Link to="/logout">Se déconnecter</Link></li>
         </ul>

@@ -1,4 +1,4 @@
-const AdminListStandings = () => {
+const AdminListRankings = () => {
     return (
         <>
             <p>Je suis la page admin des classements</p>
@@ -6,4 +6,4 @@ const AdminListStandings = () => {
     )
 }
 
-export default AdminListStandings;
+export default AdminListRankings;

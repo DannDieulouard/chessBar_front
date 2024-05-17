@@ -1,15 +1,15 @@
-import Standings from "../../components/public/Standings";
+import Rankings from "../../components/public/Rankings";
 import Footer from "../../components/public/Footer";
 import Header from "../../components/public/Header";
 
-const StandingsPage = () => {
+const RankingsPage = () => {
     return (
       <>
         <Header />
-        <Standings />
+        <Rankings />
         <Footer />
       </>
     );
   };
   
-  export default StandingsPage;
+  export default RankingsPage;

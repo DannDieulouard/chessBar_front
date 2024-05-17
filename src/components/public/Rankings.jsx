@@ -1,4 +1,4 @@
-const Standings = () => {
+const Rankings = () => {
     return (
         <>
             <h1>CLASSEMENTS</h1>
@@ -6,4 +6,4 @@ const Standings = () => {
     )
 }
 
-export default Standings;
+export default Rankings;

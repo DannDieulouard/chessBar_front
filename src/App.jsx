@@ -7,7 +7,7 @@ import LogoutPage from "./pages/public/LogoutPage";
 import SignupPage from "./pages/public/SignupPage";
 import ConceptPage from "./pages/public/ConceptPage";
 import TournamentsPage from "./pages/public/TournamentsPage";
-import StandingsPage from "./pages/public/StandingsPage";
+import RankingsPage from "./pages/public/RankingsPage";
 import RulesPage from "./pages/public/RulesPages";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import AdminListBarsPage from "./pages/admin/AdminListBarsPage";
@@ -15,8 +15,8 @@ import AdminCreateBarPage from "./pages/admin/AdminCreateBarPage";
 import AdminUpdateBarPage from "./pages/admin/AdminUpdateBarPage";
 import AdminListTournamentsPage from "./pages/admin/AdminListTournamentsPage";
 import AdminCreateTournamentsPage from "./pages/admin/AdminCreateTournamentsPage";
-import AdminListStandingsPage from "./pages/admin/AdminListStandingsPage";
-import AdminCreateStandingsPage from "./pages/admin/AdminCreateStandingsPage";
+import AdminListRankingsPage from "./pages/admin/AdminListRankingsPage";
+import AdminCreateRankingsPage from "./pages/admin/AdminCreateRankingsPage";
 
 function App() {
   return (
@@ -27,7 +27,7 @@ function App() {
         <Route path="/bars" element={<ListBarsPage />} />
         <Route path="/bars/details/:id" element={<DetailsBarPage />} />
         <Route path="/tournaments" element={<TournamentsPage />} />
-        <Route path="/standings" element={<StandingsPage />} />
+        <Route path="/rankings" element={<RankingsPage />} />
         <Route path="/rules" element={<RulesPage />} />
 
         <Route path="/login" element={<LoginPage />} />
@@ -40,8 +40,8 @@ function App() {
         <Route path="/admin/bars/:id/update" element={<AdminUpdateBarPage />} />
         <Route path="/admin/tournaments" element={<AdminListTournamentsPage />} />
         <Route path="/admin/tournaments/create" element={<AdminCreateTournamentsPage />} />
-        <Route path="/admin/standings" element={<AdminListStandingsPage />} />
-        <Route path="/admin/standings/create" element={<AdminCreateStandingsPage />} />
+        <Route path="/admin/rankings" element={<AdminListRankingsPage />} />
+        <Route path="/admin/rankings/create" element={<AdminCreateRankingsPage />} />
 
 
       </Routes>
