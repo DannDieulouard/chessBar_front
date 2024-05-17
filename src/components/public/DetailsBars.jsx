@@ -13,13 +13,8 @@ const DetailsBar = () => {
       .then((response) => {
         return response.json();
       })
-      .then((barData) => {
-
-        const bar = {
-          ...barData.data,
-          address: JSON.parse(barData.data.address)
-        }
-        setBar(bar);
+      .then((barsData) => {
+        setBar(barsData.data);
       });
   }, []);
 
@@ -31,7 +26,7 @@ const DetailsBar = () => {
         <>
           <h2>{bar.name}</h2>
 
-          <p>Adresse : {bar.address.number} {bar.address.street} {bar.address.postCode} {bar.address.city}</p>
+          <p>Adresse : {bar.address}</p>
 
           <p>Site internet : {bar.website}</p>
 

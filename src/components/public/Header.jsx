@@ -10,7 +10,7 @@ const Header = () => {
             <div class="nav_logo"></div>
               <li><Link to="/">ACCUEIL</Link></li>
               <li><Link to="/concept">CONCEPT</Link></li>
-              <li><Link to="/bars">BARS</Link></li>
+              <li><Link to="/bars">VILLES</Link></li>
               <li><Link to="/tournaments">TOURNOIS</Link></li>
               <li><Link to="/rankings">CLASSEMENTS</Link></li>
               <li><Link to="/rules">RÈGLEMENT</Link></li>
