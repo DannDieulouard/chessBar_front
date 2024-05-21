@@ -1,0 +1,41 @@
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
+  
+  .carousel img {
+    width: 70%;
+    height: auto;
+  }
+  
+  .carousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  .carousel button:focus {
+    outline: none;
+  }
+  
+  .carousel button:first-of-type {
+    left: 10px;
+  }
+  
+  .carousel button:last-of-type {
+    right: 10px;
+  }
+  

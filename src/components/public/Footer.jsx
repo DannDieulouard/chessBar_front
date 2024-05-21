@@ -22,9 +22,9 @@ const Footer = () => {
                         <img src={facebookLogo} alt="Facebook" className="facebook-icon" />
                         </a>
                      </div>
-                    <li><a href="#" className="#nav1">CONDITIONS GENERALES</a></li>
-                    <li><a href="#" className="#nav1">PLAN DU SITE</a></li>
-                    <li><a href="#" className="#nav1">COOKIES</a></li>
+                    <li><a href="#" className="nav1">CONDITIONS GENERALES</a></li>
+                    <li><a href="#" className="nav1">PLAN DU SITE</a></li>
+                    <li><a href="#" className="nav1">COOKIES</a></li>
                 </ul>
         </footer>
         </>

@@ -27,7 +27,7 @@
 }
 
 .nav_logo {
-    background-image: url(../../public/images/header/logoSD.png);
+    background-image: url(../../public/images/header/logo.svg);
     width: 4%;
     height: 4%;
     background-size: cover;
