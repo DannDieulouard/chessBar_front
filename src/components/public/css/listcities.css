@@ -1,0 +1,12 @@
+.listcities {
+    margin-top: 50px;
+    margin-left: 240px;
+    width: 900px;
+    height: 110px;
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}

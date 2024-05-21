@@ -1,6 +1,6 @@
 /* Configuration du main */
 
-.survivez {
+.intro {
     margin-top: 50px;
     margin-left: 240px;
     width: 900px;
@@ -14,29 +14,32 @@
     flex-direction: column;
 }
 
-.ensavoirplus {
+.subscribe {
     width: 90px;
     height: 20px;
     padding: 10px 20px;
     background-color: #bb8e6b;
     color: white;
-
+    text-decoration: none;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
 }
 
-.ensavoirplus:hover {
+.subscribe:hover {
     background-color: goldenrod;
 }
 
-.actualites {
+.villes{
 
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
+    text-align: center;
+    margin-left: 300px;
+    margin-right: 300px;
 }
 
 h2 {
@@ -52,11 +55,11 @@ h2 {
     height: 500px;
     background-color: white;
     border: 1px solid black;
-    top: 5px;  
     position: relative;
     margin-block-end: 50px;
     background-color: #282725;
     margin-left: 20px;
+    margin-right: 20px;
 
 }
 
