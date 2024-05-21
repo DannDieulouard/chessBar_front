@@ -36,28 +36,6 @@
     width: 30px;
 }
 
-.app {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    height: 100vh;
-    background-color: #282c34;
-    color: white;
-  }
-  
-  button {
-    margin: 10px;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-  }
-
-
-
-
-
-
 /* Configuration de la banner*/
 
 header {

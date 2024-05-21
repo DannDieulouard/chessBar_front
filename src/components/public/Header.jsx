@@ -13,6 +13,9 @@ const Header = () => {
               <li><Link to="/tournaments">TOURNOIS</Link></li>
               <li><Link to="/rankings">CLASSEMENTS</Link></li>
               <li><Link to="/rules">RÈGLEMENT</Link></li>
+              <a>
+                <button><Link to="/login"></Link></button>
+              </a> 
             </ul>
           </nav>
           <header>
