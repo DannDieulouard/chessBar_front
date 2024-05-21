@@ -19,8 +19,8 @@ import AdminCreateTournamentsPage from "./pages/admin/AdminCreateTournamentsPage
 import AdminListRankingsPage from "./pages/admin/AdminListRankingsPage";
 import AdminCreateRankingsPage from "./pages/admin/AdminCreateRankingsPage";
 
-
 function App() {
+  
   return (
     <BrowserRouter>
       <Routes>
@@ -45,8 +45,7 @@ function App() {
         <Route path="/admin/tournaments/create" element={<AdminCreateTournamentsPage />} />
         <Route path="/admin/rankings" element={<AdminListRankingsPage />} />
         <Route path="/admin/rankings/create" element={<AdminCreateRankingsPage />} />
-
-
+        
       </Routes>
     </BrowserRouter>
   );
