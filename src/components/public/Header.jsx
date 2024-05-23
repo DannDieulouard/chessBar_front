@@ -26,10 +26,11 @@ const Header = () => {
               <li><Link to="/tournaments">TOURNOIS</Link></li>
               <li><Link to="/rankings">CLASSEMENTS</Link></li>
               <li><Link to="/rules">RÈGLEMENT</Link></li>
-              <a>
-                <button><Link to="/login"></Link></button>
-              </a>
-              <p>{hasCookie ? 'Cookie exists!' : 'Cookie does not exist.'}</p> 
+              {hasCookie ? <> <section> 
+                   <button className="profile"><Link to="/profile"></Link></button> </section>
+                    <section> <button className="logout"><Link to="/logout"></Link></button>
+                 </section> </> : 
+                 <button className="login"><Link to="/login"></Link></button>}  
             </ul>
           </nav>
           <header>
