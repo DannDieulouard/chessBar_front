@@ -1,7 +1,20 @@
-import { Link } from "react-router-dom";
 import "../public/css/header.css";
+import { Link } from "react-router-dom";
+import React, { useEffect, useState } from 'react';
+import Cookies from 'js-cookie';
+
+const checkCookie = (access_token) => {
+  return Cookies.get(access_token) !== undefined;
+};
 
 const Header = () => {
+  const [hasCookie, setHasCookie] = useState(false);
+
+  useEffect(() => {
+    const cookieExists = checkCookie('access_token');
+    console.log(cookieExists)
+    setHasCookie(cookieExists);
+  }, []);
 
     return (
       <>
@@ -15,7 +28,8 @@ const Header = () => {
               <li><Link to="/rules">RÈGLEMENT</Link></li>
               <a>
                 <button><Link to="/login"></Link></button>
-              </a> 
+              </a>
+              <p>{hasCookie ? 'Cookie exists!' : 'Cookie does not exist.'}</p> 
             </ul>
           </nav>
           <header>

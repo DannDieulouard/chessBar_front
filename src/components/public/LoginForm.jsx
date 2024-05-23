@@ -34,7 +34,6 @@ const LoginForm = () => {
       }
     })
     .then((decodedToken) => {
-      console.log(decodedToken)
       if (decodedToken === 1) {
         navigate('/admin')
       } 

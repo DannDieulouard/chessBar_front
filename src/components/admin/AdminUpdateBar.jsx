@@ -27,31 +27,23 @@ const UpdateBar = () => {
     event.preventDefault();
 
     const name = event.target.name.value;
-    const priceHour = event.target.priceHour.value;
-    const priceDay = event.target.priceDay.value;
-    const priceMonth = event.target.priceMonth.value;
-    const number = event.target.number.value;
-    const street = event.target.street.value;
-    const postCode = event.target.postCode.value;
     const city = event.target.city.value;
-    const superficy = event.target.superficy.value;
-    const capacity = event.target.capacity.value;
+    const address = event.target.address.value;
+    const imageUrl = event.target.imageUrl.value;
+    const website = event.target.website.value;
+    const phone = event.target.phone.value;
+    const game_day = event.target.game_day.value;
+    const game_time = event.target.game_time.value;
 
     const barData = {
       name: name,
-      price: {
-        hour: priceHour,
-        day: priceDay,
-        month: priceMonth,
-      },
-      address: {
-        number: number,
-        street: street,
-        postCode: postCode,
-        city: city,
-      },
-      superficy: superficy,
-      capacity: capacity,
+      city: city,
+      address: address,
+      imageUrl: imageUrl,
+      website: website,
+      phone: phone,
+      game_day: game_day,
+      game_time: game_time
     };
 
     const barDataJson = JSON.stringify(barData);
@@ -85,60 +77,41 @@ const UpdateBar = () => {
             </label>
           </div>
           <div>
-            <label>
-              Prix à l'heure
-              <input type="text" name="priceHour" defaultValue={bar.price.hour} />
-            </label>
-          </div>
-          <div>
-            <label>
-              Prix au jour
-              <input type="text" name="priceDay" defaultValue={bar.price.day} />
-            </label>
-          </div>
-          <div>
-            <label>
-              Prix au mois
-              <input type="text" name="priceMonth" defaultValue={bar.price.month} />
-            </label>
-          </div>
-          <div>
-            <label>
-              Numéro de rue
-              <input type="number" name="number" defaultValue={bar.address.number} />
-            </label>
-          </div>
-          <div>
-            <label>
-              Rue
-              <input type="text" name="street" defaultValue={bar.address.street} />
-            </label>
-          </div>
-          <div>
-            <label>
-              Code postal
-              <input type="text" name="postCode" defaultValue={bar.address.postCode} />
-            </label>
-          </div>
-          <div>
-            <label>
+          <label>
               Ville
-              <input type="text" name="city" defaultValue={bar.address.city} />
-            </label>
+              <input type="text" name="city" defaultValue={bar.city} />
+          </label>
           </div>
           <div>
-            <label>
-              Superficie
-              <input type="number" name="superficy" defaultValue={bar.superficy} />
-            </label>
+          <label>
+              imageUrl
+              <input type="text" name="imageUrl" defaultValue={bar.imageUrl} />
+          </label>
           </div>
           <div>
-            <label>
-              Capacité
-              <input type="number" name="capacity" defaultValue={bar.capacity} />
-            </label>
+          <label>
+              Site internet
+              <input type="text" name="website" defaultValue={bar.website} />
+          </label>
           </div>
-
+          <div>
+          <label>
+              Téléphone
+              <input type="text" name="phone" defaultValue={bar.phone} />
+          </label>
+          </div>
+          <div>
+          <label>
+              Jour de jeu
+              <input type="text" name="game_day" defaultValue={bar.game_day} />
+          </label>
+          </div>
+          <div>
+          <label>
+              Heure de jeu
+              <input type="text" name="game_time" defaultValue={bar.game_time} />
+          </label>
+          </div>
           <input type="submit" value="Mettre à jour" />
         </form>
       )}

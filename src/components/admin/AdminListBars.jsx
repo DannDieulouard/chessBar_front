@@ -36,6 +36,7 @@ const AdminListBars = () => {
     });
   };
   return (
+    console.log(decodedToken),
     <>
       <main>
         <h2>Les bars</h2>
@@ -44,8 +45,7 @@ const AdminListBars = () => {
             return (
               <article key={bar.id}>
                 <h2>{bar.name}</h2>
-
-                {decodedToken.RoleId === 1 && (
+                {decodedToken.roleId === 1 && (
                   <section>
                     <button onClick={(event) => handleDeleteBar(event, bar.id)}>Supprimer</button>
                     <Link to={`/admin/bars/${bar.id}/update`}>Modifier</Link>
