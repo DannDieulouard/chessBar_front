@@ -36,7 +36,6 @@ const AdminListBars = () => {
     });
   };
   return (
-    console.log(decodedToken),
     <>
       <main>
         <h2>Les bars</h2>

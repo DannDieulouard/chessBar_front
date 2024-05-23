@@ -12,7 +12,6 @@ const Header = () => {
 
   useEffect(() => {
     const cookieExists = checkCookie('access_token');
-    console.log(cookieExists)
     setHasCookie(cookieExists);
   }, []);
 
@@ -27,9 +26,8 @@ const Header = () => {
               <li><Link to="/rankings">CLASSEMENTS</Link></li>
               <li><Link to="/rules">RÈGLEMENT</Link></li>
               {hasCookie ? <> <section> 
-                   <button className="profile"><Link to="/profile"></Link></button> </section>
-                    <section> <button className="logout"><Link to="/logout"></Link></button>
-                 </section> </> : 
+                   <button className="profile"><Link to ={`/profile`}></Link></button></section>
+                    <section><button className="logout"><Link to="/logout"></Link></button></section> </> : 
                  <button className="login"><Link to="/login"></Link></button>}  
             </ul>
           </nav>

@@ -4,6 +4,7 @@ import ListBarsPage from "./pages/public/ListBarsPage";
 import ListCitiesPage from "./pages/public/ListCitiesPage";
 import DetailsBarPage from "./pages/public/DetailsBarsPage";
 import LoginPage from "./pages/public/LoginPage";
+import ProfilePage from "./pages/public/ProfilePage";
 import LogoutPage from "./pages/public/LogoutPage";
 import SignupPage from "./pages/public/SignupPage";
 import ConceptPage from "./pages/public/ConceptPage";
@@ -33,9 +34,10 @@ function App() {
         <Route path="/rankings" element={<RankingsPage />} />
         <Route path="/rules" element={<RulesPage />} />
 
-        <Route path="/login" element={<LoginPage />} />
-        <Route path="/logout" element={<LogoutPage />} />
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/logout" element={<LogoutPage />} />
 
         <Route path="/admin" element={<AdminDashboardPage />} />
         <Route path="/admin/bars" element={<AdminListBarsPage />} />
