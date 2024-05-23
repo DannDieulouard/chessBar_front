@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom"
-import { useVerifyToken } from "../../utils/authGuard";
 
 const LoginForm = () => {
   const [message, setMessage] = useState("");
@@ -35,6 +34,7 @@ const LoginForm = () => {
       }
     })
     .then((decodedToken) => {
+      console.log(decodedToken)
       if (decodedToken === 1) {
         navigate('/admin')
       } 
