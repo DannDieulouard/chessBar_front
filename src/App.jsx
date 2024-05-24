@@ -12,6 +12,8 @@ import TournamentsPage from "./pages/public/TournamentsPage";
 import RankingsPage from "./pages/public/RankingsPage";
 import RulesPage from "./pages/public/RulesPages";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
+import AdminListUsersPage from "./pages/admin/AdminListUsersPage";
+import AdminCreateUserPage from "./pages/admin/AdminCreateUserPage";
 import AdminListBarsPage from "./pages/admin/AdminListBarsPage";
 import AdminCreateBarPage from "./pages/admin/AdminCreateBarPage";
 import AdminUpdateBarPage from "./pages/admin/AdminUpdateBarPage";
@@ -40,6 +42,8 @@ function App() {
         <Route path="/logout" element={<LogoutPage />} />
 
         <Route path="/admin" element={<AdminDashboardPage />} />
+        <Route path="/admin/users" element={<AdminListUsersPage />} />
+        <Route path="/admin/users/create" element={<AdminCreateUserPage />} />
         <Route path="/admin/bars" element={<AdminListBarsPage />} />
         <Route path="/admin/bars/create" element={<AdminCreateBarPage />} />
         <Route path="/admin/bars/:id/update" element={<AdminUpdateBarPage />} />

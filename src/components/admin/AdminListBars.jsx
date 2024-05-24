@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
+import Sidebar from "./AdminSidebar";
+import AdminMiniHeader from "./AdminMiniHeader";
 
 const AdminListBars = () => {
   const [bars, setBars] = useState([]);
@@ -39,6 +41,8 @@ const AdminListBars = () => {
     <>
       <main>
         <h2>Les bars</h2>
+        <AdminMiniHeader />
+        <Sidebar />
         <section>
           {bars.map((bar) => {
             return (
