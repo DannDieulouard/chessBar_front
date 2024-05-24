@@ -1,0 +1,17 @@
+.flex_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+    margin: 32px;
+}
+
+.flex_dashboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}

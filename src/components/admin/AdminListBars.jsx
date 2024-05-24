@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
 import Sidebar from "./AdminSidebar";
 import AdminMiniHeader from "./AdminMiniHeader";
+import './css/adminDashboard.css';
 
 const AdminListBars = () => {
   const [bars, setBars] = useState([]);
@@ -42,8 +43,9 @@ const AdminListBars = () => {
       <main>
         <h2>Les bars</h2>
         <AdminMiniHeader />
-        <Sidebar />
-        <section>
+        <div className="flex_dashboard">
+        <aside><Sidebar /></aside>
+        <section className="flex_list">
           {bars.map((bar) => {
             return (
               <article key={bar.id}>
@@ -51,13 +53,14 @@ const AdminListBars = () => {
                 {decodedToken.roleId === 1 && (
                   <section>
                     <button onClick={(event) => handleDeleteBar(event, bar.id)}>Supprimer</button>
-                    <Link to={`/admin/bars/${bar.id}/update`}>Modifier</Link>
+                    <Link to={`/admin/bars/update/${bar.id}`}>Modifier</Link>
                   </section>
                 )}
               </article>
             );
           })}
         </section>
+        </div>
       </main>
     </>
   );

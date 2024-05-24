@@ -1,7 +1,10 @@
+import Sidebar from "./AdminSidebar";
+
 const AdminCreateTournaments = () => {
     return (
         <>
-            <p>Je suis la page admin pour la création d'un tournoi</p>
+            <h2>Créer un tournoi</h2>
+            <Sidebar />
         </>
     )
 }

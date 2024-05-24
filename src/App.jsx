@@ -46,7 +46,7 @@ function App() {
         <Route path="/admin/users/create" element={<AdminCreateUserPage />} />
         <Route path="/admin/bars" element={<AdminListBarsPage />} />
         <Route path="/admin/bars/create" element={<AdminCreateBarPage />} />
-        <Route path="/admin/bars/:id/update" element={<AdminUpdateBarPage />} />
+        <Route path="/admin/bars/update/:id" element={<AdminUpdateBarPage />} />
         <Route path="/admin/tournaments" element={<AdminListTournamentsPage />} />
         <Route path="/admin/tournaments/create" element={<AdminCreateTournamentsPage />} />
         <Route path="/admin/rankings" element={<AdminListRankingsPage />} />

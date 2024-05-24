@@ -1,7 +1,10 @@
+import Sidebar from "./AdminSidebar";
+
 const AdminCreateRankings = () => {
     return (
         <>
-            <p>Je suis la page admin pour la création d'un classement</p>
+            <h2>Créer un classement</h2>
+            <Sidebar />
         </>
     )
 }

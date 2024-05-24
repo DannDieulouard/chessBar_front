@@ -1,5 +1,6 @@
 import { useVerifyToken } from "../../utils/authGuard";
 import { useNavigate } from "react-router-dom";
+import Sidebar from "./AdminSidebar";
 
 const CreateBar = () => {
 
@@ -51,6 +52,7 @@ const CreateBar = () => {
       return (
         <>
           <h2>Créer un bar</h2>
+            <Sidebar />
     
           <form onSubmit={handleCreateBar}>
             <div>
