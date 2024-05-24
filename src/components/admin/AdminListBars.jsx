@@ -49,11 +49,11 @@ const AdminListBars = () => {
           {bars.map((bar) => {
             return (
               <article key={bar.id}>
-                <h2>{bar.name}</h2>
                 {decodedToken.roleId === 1 && (
                   <section>
-                    <button onClick={(event) => handleDeleteBar(event, bar.id)}>Supprimer</button>
-                    <Link to={`/admin/bars/update/${bar.id}`}>Modifier</Link>
+                    <h4>{bar.name}</h4>
+                    <button class="delete" onClick={(event) => handleDeleteBar(event, bar.id)}>Supprimer</button>
+                    <button class="modify"><Link to={`/admin/bars/update/${bar.id}`}>Modifier</Link></button>
                   </section>
                 )}
               </article>

@@ -15,3 +15,47 @@
     align-items: flex-start;
     flex-wrap: wrap;
 }
+
+/* General Button Styles */
+.button {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Modify Button */
+.modify {
+    background-color: #BE9472;
+    color: white;
+}
+
+.modify a {
+    text-decoration: none;
+    color: white;
+}
+
+.modify:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modify:active {
+    box-shadow: none;
+}
+
+/* Delete Button */
+.delete {
+    background-color: #654028;
+    color: white;
+}
+
+.delete:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.delete:active {
+    box-shadow: none;
+}

@@ -41,7 +41,7 @@ const AdminListTournaments = () => {
   return (
     <>
       <main>
-        <h2>Les classements</h2>
+        <h2>Les tournois</h2>
         <AdminMiniHeader />
         <div className="flex_dashboard">
         <aside><Sidebar /></aside>
@@ -49,12 +49,12 @@ const AdminListTournaments = () => {
           {tournaments.map((tournament) => {
             return (
               <article key={tournament.id}>
-                <h2>{tournament.name}</h2>
                 {decodedToken.roleId === 1 && (
                   <section>
-                    <button onClick={(event) => handleDeleteTournament(event, tournament.id)}>Supprimer</button>
-                    <Link to={`/admin/tournaments/update/${tournament.id}`}>Modifier</Link>
-                  </section>
+                  <h4>{tournament.name}</h4>
+                  <button class="delete" onClick={(event) => handleDeleteTournament(event, tournament.id)}>Supprimer</button>
+                  <button class="modify"><Link to={`/admin/tournaments/update/${tournament.id}`}>Modifier</Link></button>
+                </section>
                 )}
               </article>
             );

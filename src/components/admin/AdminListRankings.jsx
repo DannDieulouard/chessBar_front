@@ -49,12 +49,12 @@ const AdminListRankings = () => {
           {rankings.map((ranking) => {
             return (
               <article key={ranking.id}>
-                <h2>{ranking.name}</h2>
                 {decodedToken.roleId === 1 && (
                   <section>
-                    <button onClick={(event) => handleDeleteRanking(event, ranking.id)}>Supprimer</button>
-                    <Link to={`/admin/rankings/update/${ranking.id}`}>Modifier</Link>
-                  </section>
+                  <h4>{ranking.name}</h4>
+                  <button class="delete" onClick={(event) => handleDeleteRanking(event, ranking.id)}>Supprimer</button>
+                  <button class="modify"><Link to={`/admin/rankings/update/${ranking.id}`}>Modifier</Link></button>
+                </section>
                 )}
               </article>
             );

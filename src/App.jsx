@@ -14,13 +14,16 @@ import RulesPage from "./pages/public/RulesPages";
 import AdminDashboardPage from "./pages/admin/AdminDashboardPage";
 import AdminListUsersPage from "./pages/admin/AdminListUsersPage";
 import AdminCreateUserPage from "./pages/admin/AdminCreateUserPage";
+import AdminUpdateUserPage from "./pages/admin/AdminUpdateUserPage";
 import AdminListBarsPage from "./pages/admin/AdminListBarsPage";
 import AdminCreateBarPage from "./pages/admin/AdminCreateBarPage";
 import AdminUpdateBarPage from "./pages/admin/AdminUpdateBarPage";
 import AdminListTournamentsPage from "./pages/admin/AdminListTournamentsPage";
 import AdminCreateTournamentsPage from "./pages/admin/AdminCreateTournamentsPage";
+import AdminUpdateTournamentPage from "./pages/admin/AdminUpdateTournamentPage";
 import AdminListRankingsPage from "./pages/admin/AdminListRankingsPage";
 import AdminCreateRankingsPage from "./pages/admin/AdminCreateRankingsPage";
+import AdminUpdateRankingPage from "./pages/admin/AdminUpdateRankingPage";
 
 function App() {
   
@@ -44,13 +47,16 @@ function App() {
         <Route path="/admin" element={<AdminDashboardPage />} />
         <Route path="/admin/users" element={<AdminListUsersPage />} />
         <Route path="/admin/users/create" element={<AdminCreateUserPage />} />
+        <Route path="/admin/users/update/:id" element={<AdminUpdateUserPage />} />
         <Route path="/admin/bars" element={<AdminListBarsPage />} />
         <Route path="/admin/bars/create" element={<AdminCreateBarPage />} />
         <Route path="/admin/bars/update/:id" element={<AdminUpdateBarPage />} />
         <Route path="/admin/tournaments" element={<AdminListTournamentsPage />} />
         <Route path="/admin/tournaments/create" element={<AdminCreateTournamentsPage />} />
+        <Route path="/admin/tournaments/update/:id" element={<AdminUpdateTournamentPage />} />
         <Route path="/admin/rankings" element={<AdminListRankingsPage />} />
         <Route path="/admin/rankings/create" element={<AdminCreateRankingsPage />} />
+        <Route path="/admin/rankings/update/:id" element={<AdminUpdateRankingPage />} />
         
       </Routes>
     </BrowserRouter>
