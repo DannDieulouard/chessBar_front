@@ -1,7 +1,8 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import { useState, useEffect } from "react";
+import "../public/css/detailsbars.css";
 
-const DetailsBar = () => {
+const DetailsBars = () => {
   const { id } = useParams();
   const [bar, setBar] = useState(null);
 
@@ -19,25 +20,26 @@ const DetailsBar = () => {
   }, []);
 
   return (
-    <main>
-      <h1>Détail du bar : </h1>
-
+    <div className="barDetail">
       {bar ? (
         <>
-          <h2>{bar.name}</h2>
+          <h1>{bar.name}</h1>
 
-          <p>Adresse : {bar.address}</p>
+          <p><span className="bolded">Créneau de jeu ChessBar</span> : Tous les {bar.game_day}s à {bar.game_time} </p>
 
-          <p>Site internet : {bar.website}</p>
+          <p><span className="bolded">Adresse</span> : {bar.address}</p>
 
-          <p>Contact : {bar.phone}</p>
+          <p><span className="bolded">Site internet</span> : {bar.website}</p>
 
+          <p><span className="bolded">Contact</span> : {bar.phone}</p>
+
+          <p className="subscribe"> <Link to="/tournaments">Je m'inscris!</Link></p> 
         </>
       ) : (
         <h2>Bar non trouvé</h2>
       )}
-    </main>
+    </div>
   );
 };
 
-export default DetailsBar;
+export default DetailsBars;

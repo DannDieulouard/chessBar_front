@@ -1,4 +1,4 @@
-.concept {
+.barDetail {
     margin-top: 50px;
     width: 900px;
     height: 110px;
@@ -11,9 +11,13 @@
     flex-direction: column;
 }
 
-.concept p {
+.barDetail p {
     line-height: 1.5rem;
 }
+
+.bolded {
+    font-weight: bold;
+  }
 
 .subscribe {
     width: 90px;

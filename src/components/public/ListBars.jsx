@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
+import "../public/css/listbars.css";
 
 const ListBars = () => {
   const [bars, setBars] = useState([]);
@@ -18,14 +19,14 @@ const ListBars = () => {
 
   return (
     <main>
-      <h2>Les bars</h2>
-
       <section>
         {bars.map((bar) => {
           return (
-            <article key={bar.id}>
-              <h2>{bar.name}</h2>
-              <Link to={`/bars/details/${bar.id}`}>Voir le détail du bar</Link>
+            <article className="listBars" key={bar.id}>
+              <h2>{bar.name} - {bar.city}</h2>
+              <Link to={`/bars/details/${bar.id}`}>
+              <img src={bar.imageUrl} alt="barLogo"/>
+              </Link>
             </article>
           );
         })}

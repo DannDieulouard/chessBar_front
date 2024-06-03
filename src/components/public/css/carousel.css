@@ -1,14 +1,14 @@
 .carousel {
-    display: flex;
-    align-items: center;
+    display: block;
     justify-content: center;
     position: relative;
     width: 100%;
-    max-width: 600px;
-    margin: auto;
+    max-width: 450px;
     overflow: hidden;
-    padding-top: 100px;
-    padding-bottom: 20px;
+    padding-left: 380px;
+    padding-right: 250px;
+    padding-bottom: 50px;
+    margin: auto;
   }
   
   .carousel img {
@@ -20,9 +20,10 @@
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: #654028;
     color: white;
     border: none;
+    border-radius: 50px;
     padding: 10px;
     cursor: pointer;
   }
@@ -32,10 +33,7 @@
   }
   
   .carousel button:first-of-type {
-    left: 10px;
+    left: 310px;
   }
   
-  .carousel button:last-of-type {
-    right: 10px;
-  }
   

@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <>
         <footer>
-                <ul className="pieddepage">
+                <div className="pieddepage">
                     <div className="footer_logo">
                         <img src={chessbarLogo} alt="Chessbar" className="chessbar-icon" />
                     </div>
@@ -22,10 +22,8 @@ const Footer = () => {
                         <img src={facebookLogo} alt="Facebook" className="facebook-icon" />
                         </a>
                      </div>
-                    <li><a href="#" className="nav1">CONDITIONS GENERALES</a></li>
-                    <li><a href="#" className="nav1">PLAN DU SITE</a></li>
-                    <li><a href="#" className="nav1">COOKIES</a></li>
-                </ul>
+                     <p>© 2024 ChessBar, tous droits réservés.</p>
+                </div>
         </footer>
         </>
     )

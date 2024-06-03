@@ -14,18 +14,25 @@
     flex-direction: column;
 }
 
+.intro p {
+    line-height: 1.5rem;
+}
+
 .subscribe {
     width: 90px;
     height: 20px;
-    padding: 10px 20px;
     background-color: #bb8e6b;
-    color: white;
-    text-decoration: none;
-    text-align: center;
+    padding: 10px 20px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 30px;
     border-radius: 50px;
+}
+
+.subscribe a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
 }
 
 .subscribe:hover {
@@ -54,7 +61,6 @@ h2 {
     
     width: 300px;
     height: 500px;
-    background-color: white;
     border: 1px solid black;
     position: relative;
     margin-block-end: 50px;
@@ -64,12 +70,9 @@ h2 {
 
 }
 
-h3 {
-    color: white;
-}
-
-p {
-    line-height: 1.5rem;
+.features img {
+    height: 160px;
+    width: 300px;
 }
 
 .features h3 {
@@ -85,4 +88,18 @@ p {
     right: 20px;
     color: white;
     text-align: left;
+    line-height: 1rem;
+}
+
+.features a {
+    text-decoration: none;
+    color: white;
+}
+
+h3 {
+    color: white;
+}
+
+p {
+    line-height: 1rem;
 }

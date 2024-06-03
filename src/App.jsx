@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/public/HomePage";
 import ListBarsPage from "./pages/public/ListBarsPage";
 import ListCitiesPage from "./pages/public/ListCitiesPage";
+import DetailsCitiesPage from "./pages/public/DetailsCitiesPage";
 import DetailsBarPage from "./pages/public/DetailsBarsPage";
 import LoginPage from "./pages/public/LoginPage";
 import ProfilePage from "./pages/public/ProfilePage";
@@ -33,6 +34,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/concept" element={<ConceptPage />} />
         <Route path="/cities" element={<ListCitiesPage />} />
+        <Route path="/cities/details/:id" element={<DetailsCitiesPage />} />
         <Route path="/bars" element={<ListBarsPage />} />
         <Route path="/bars/details/:id" element={<DetailsBarPage />} />
         <Route path="/tournaments" element={<TournamentsPage />} />

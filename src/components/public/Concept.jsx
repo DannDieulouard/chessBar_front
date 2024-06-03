@@ -1,4 +1,5 @@
 import "../public/css/concept.css";
+import { Link } from "react-router-dom";
 import ConceptCarousel from "./ConceptCarousel";
 
 const Concept = () => {
@@ -14,6 +15,7 @@ const Concept = () => {
                 <p>
                 Devenez le champion de votre bar et de votre ville !
                 </p>
+                <p className="subscribe"> <Link to="/tournaments">Je m'inscris!</Link></p> 
             </div>
 
             <ConceptCarousel />

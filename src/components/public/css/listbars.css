@@ -1,0 +1,9 @@
+
+.listBars a img {
+    display: block;
+    height: 400px;
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
