@@ -5,7 +5,6 @@ import ListCitiesPage from "./pages/public/ListCitiesPage";
 import DetailsCitiesPage from "./pages/public/DetailsCitiesPage";
 import DetailsBarPage from "./pages/public/DetailsBarsPage";
 import LoginPage from "./pages/public/LoginPage";
-import ProfilePage from "./pages/public/ProfilePage";
 import LogoutPage from "./pages/public/LogoutPage";
 import SignupPage from "./pages/public/SignupPage";
 import ConceptPage from "./pages/public/ConceptPage";
@@ -25,6 +24,7 @@ import AdminUpdateTournamentPage from "./pages/admin/AdminUpdateTournamentPage";
 import AdminListRankingsPage from "./pages/admin/AdminListRankingsPage";
 import AdminCreateRankingsPage from "./pages/admin/AdminCreateRankingsPage";
 import AdminUpdateRankingPage from "./pages/admin/AdminUpdateRankingPage";
+import UpdateProfilePage from "./pages/public/ProfilePage";
 
 function App() {
   
@@ -43,7 +43,7 @@ function App() {
 
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/profile" element={<UpdateProfilePage />} />
         <Route path="/logout" element={<LogoutPage />} />
 
         <Route path="/admin" element={<AdminDashboardPage />} />

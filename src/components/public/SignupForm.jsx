@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
+import "../public/css/signupform.css";
 
 const SignupForm = () => {
   const [message, setMessage] = useState("");
@@ -50,67 +51,51 @@ const SignupForm = () => {
 
   return (
     <>
-      <h2>Créez votre nouveau compte : </h2>
+      <h2>Créez votre nouveau compte </h2>
       <p>{message}</p>
+      <div className="container"> 
+      <div className="signup-form">
       <form onSubmit={handleSignupSubmit}>
-            <div>
-              <label>
-                Prénom
-                <input type="text" name="surname" />
-              </label>
+            <div className="input-group">
+              <label>Prénom</label>
+              <input type="text" name="surname" />
             </div>
-            <div>
-              <label>
-                Nom
-                <input type="text" name="name" />
-              </label>
+            <div className="input-group">
+              <label>Nom</label>
+              <input type="text" name="name" />
             </div>
-            <div>
+            <div className="input-group">
+              <label>Code postal</label>
+              <input type="text" name="postCode" />
             </div>
-            <div>
-              <label>
-                Code postal
-                <input type="text" name="postCode" />
-              </label>
+            <div className="input-group">
+              <label>Ville</label>
+              <input type="text" name="city" />
             </div>
-            <div>
-              <label>
-                Ville
-                <input type="text" name="city" />
-              </label>
+            <div className="input-group">
+              <label>Email</label>
+              <input type="email" name="email" />
             </div>
-            <div>
-              <label>
-                Email
-                <input type="email" name="email" />
-              </label>
+            <div className="input-group">
+              <label>Numéro de téléphone</label>
+              <input type="number" name="phone"/>
             </div>
-            <div>
-              <label>
-                Numéro de téléphone
-                <input type="number" name="phone"/>
-              </label>
+            <div className="input-group">
+              <label>Pseudo Chess.com / Lichess</label>
+              <input type="text" name="username" />
             </div>
-            <div>
-              <label>
-                Pseudo Chess.com / Lichess
-                <input type="text" name="username" />
-              </label>
+            <div className="input-group">
+              <label>Mot de passe</label>
+              <input type="password" name="password" />
             </div>
-            <div>
-              <label>
-                Mot de passe
-                <input type="password" name="password" />
-              </label>
+            <div className="input-group">
+              <label>Comment avez-vous connu ChessBar ?</label>
+              <input type="text" name="howChessbar" />
             </div>
-            <div>
-              <label>
-                Comment avez-vous connu ChessBar ?
-                <input type="text" name="howChessbar" />
-              </label>
-            </div>
-            <input type="submit" value="Créer" />
+            <button className="Signup" type="submit">Sign up !</button>
           </form>
+          </div>
+          </div>
     </>
   );
 };

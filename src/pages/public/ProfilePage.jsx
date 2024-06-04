@@ -1,15 +1,15 @@
 import Footer from "../../components/public/Footer";
 import Header from "../../components/public/Header";
-import Profile from "../../components/public/Profile"
+import UpdateProfile from "../../components/public/UpdateProfile"
 
-const ProfilePage = () => {
+const UpdateProfilePage = () => {
     return (
       <>
         <Header />
-        <Profile />
+        <UpdateProfile />
         <Footer />
       </>
     );
   };
   
-  export default ProfilePage;
+  export default UpdateProfilePage;

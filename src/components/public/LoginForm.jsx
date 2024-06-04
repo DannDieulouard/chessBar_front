@@ -1,5 +1,6 @@
 import { useState } from "react";
-import { useNavigate, Link } from "react-router-dom"
+import { useNavigate, Link } from "react-router-dom";
+import "../public/css/loginform.css";
 
 const LoginForm = () => {
   const [message, setMessage] = useState("");
@@ -47,20 +48,22 @@ const LoginForm = () => {
   return (
     <>
       <p>{message}</p>
+      <div className="container"> 
+      <div className="login-form">
       <form onSubmit={handleLoginSubmit}>
-        <label>
-          Nom de l'utilisateur
-          <input name="username" type="text" />
-        </label>
-
-        <label>
-          Mot de passe
-          <input name="password" type="password" />
-        </label>
-
-        <input type="submit" />
+      <div className="input-group">
+                    <label for="username">Username</label>
+                    <input type="text" id="username" name="username" required />
+      </div>
+                <div className="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required />
+                </div>
+                <button className="Login" type="submit">Login</button>
       </form>
-      <p>Pas encore de compte? Veuillez en créer un ici : <Link to="/signup">Je crée mon compte</Link></p>
+      <p>Pas encore de compte? Veuillez en créer un ici : <Link to="/signup">Sign up !</Link></p>
+      </div>
+    </div>
     </>
   );
 };
