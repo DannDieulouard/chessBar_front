@@ -114,6 +114,12 @@ const UpdateUser = () => {
           </div>
           <div>
           <label>
+              Phone
+              <input type="text" name="phone" defaultValue={user.phone} />
+          </label>
+          </div>
+          <div>
+          <label>
               Comment avez-vous connu ChessBar?
               <input type="text" name="howChessbar" defaultValue={user.howChessbar} />
           </label>

@@ -78,7 +78,7 @@ const SignupForm = () => {
             </div>
             <div className="input-group">
               <label>Numéro de téléphone</label>
-              <input type="number" name="phone"/>
+              <input type="text" name="phone"/>
             </div>
             <div className="input-group">
               <label>Pseudo Chess.com / Lichess</label>

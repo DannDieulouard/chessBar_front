@@ -43,7 +43,7 @@ function App() {
 
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/profile" element={<UpdateProfilePage />} />
+        <Route path="/profile/update/:id" element={<UpdateProfilePage />} />
         <Route path="/logout" element={<LogoutPage />} />
 
         <Route path="/admin" element={<AdminDashboardPage />} />

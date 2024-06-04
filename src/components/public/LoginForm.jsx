@@ -1,11 +1,13 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../public/css/loginform.css";
+import { useVerifyToken } from "../../utils/authGuard";
 
 const LoginForm = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
+  useVerifyToken()
 
   const handleLoginSubmit = (event) => {
     event.preventDefault();
@@ -25,24 +27,18 @@ const LoginForm = () => {
       body: loginDataJson,
       headers: {
         "Content-Type": "application/json",
-      },
+      },  
       credentials: "include",
     }).then((response) => {
       if (response.status === 200) {
-        navigate('/')
+        setMessage("Connexion Réussie")
+        navigate('/admin')
       } 
       else {
         setMessage("Connexion refusée");
       }
-    })
-    .then((decodedToken) => {
-      if (decodedToken === 1) {
-        navigate('/admin')
-      } 
-      else {
-        navigate('/');
-      }
-    });
+    }
+  )
   };
 
   return (
