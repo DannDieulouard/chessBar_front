@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import './App.css';
 import HomePage from "./pages/public/HomePage";
 import ListBarsPage from "./pages/public/ListBarsPage";
 import ListCitiesPage from "./pages/public/ListCitiesPage";
