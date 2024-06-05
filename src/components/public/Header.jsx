@@ -2,6 +2,7 @@ import "../public/css/header.css";
 import { Link, useParams } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
+import { useVerifyToken } from "../../utils/authGuard";
 
 const checkCookie = (access_token) => {
   return Cookies.get(access_token) !== undefined;
@@ -9,7 +10,8 @@ const checkCookie = (access_token) => {
 
 const Header = () => {
   const [hasCookie, setHasCookie] = useState(false);
-  const { id } = useParams();
+
+  const decodedToken = useVerifyToken()
 
   useEffect(() => {
     const cookieExists = checkCookie('access_token');
@@ -30,7 +32,7 @@ const Header = () => {
             <>
               <section>
                 <button className="profile">
-                  <Link to={`/profile/update/${id}`}></Link>
+                  <Link to={`/profile/update/${decodedToken.userId}`}></Link>
                 </button>
               </section>
               <section>

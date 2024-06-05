@@ -7,7 +7,7 @@ const LoginForm = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
-  useVerifyToken()
+  const decodedToken = useVerifyToken()
 
   const handleLoginSubmit = (event) => {
     event.preventDefault();
@@ -33,7 +33,7 @@ const LoginForm = () => {
       if (response.status === 200) {
         setMessage("Connexion Réussie")
         navigate('/admin')
-      } 
+      }
       else {
         setMessage("Connexion refusée");
       }

@@ -7,6 +7,7 @@ const UpdateProfile = () => {
   const navigate = useNavigate();
 
   const [user, setUser] = useState(null);
+  const [needsRefresh, setNeedRefresh] = useState(false);
 
   useEffect(() => {
     if (id) {
@@ -59,6 +60,19 @@ const UpdateProfile = () => {
       .then(() => {
         navigate("/");
       });
+  };
+
+  const handleDeleteProfile = (event, id) => {
+    fetch(`http://localhost:5000/api/users/profile/${id}`, {
+      method: "DELETE",
+      credentials: "include",
+    }).then((response) => {
+      if (response.status === 200) {
+        navigate("/login");
+      }
+
+      setNeedRefresh(!needsRefresh);
+    });
   };
 
   return (
@@ -152,6 +166,7 @@ const UpdateProfile = () => {
               <button className="UpdateProfile" type="submit">
                 Modifier mes données
               </button>
+              <button className="DeleteProfile" onClick={(event) => handleDeleteProfile(event, id)}>Supprimer mon compte</button>
             </form>
           </div>
         </div>

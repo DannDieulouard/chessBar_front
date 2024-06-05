@@ -11,7 +11,6 @@ export const useVerifyToken = () => {
   } else {
     try {
       const decodedToken = jwtDecode(accessToken);
-      console.log(decodedToken)
       
       if(decodedToken.roleId === 3) {
         navigate("/")

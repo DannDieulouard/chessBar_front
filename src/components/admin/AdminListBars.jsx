@@ -51,8 +51,8 @@ const AdminListBars = () => {
               <article key={bar.id}>
                   <section>
                     <h4>{bar.name}</h4>
-                    <button class="delete" onClick={(event) => handleDeleteBar(event, bar.id)}>Supprimer</button>
-                    <button class="modify"><Link to={`/admin/bars/update/${bar.id}`}>Modifier</Link></button>
+                    <button className="delete" onClick={(event) => handleDeleteBar(event, bar.id)}>Supprimer</button>
+                    <button className="modify"><Link to={`/admin/bars/update/${bar.id}`}>Modifier</Link></button>
                   </section>
                 
               </article>
