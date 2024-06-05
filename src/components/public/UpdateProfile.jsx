@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
+import { useVerifyToken } from "../../utils/authGuard";
 import "../public/css/updateprofile.css";
 
 const UpdateProfile = () => {
   const { id } = useParams();
   const navigate = useNavigate();
+  const decodedToken = useVerifyToken();
 
   const [user, setUser] = useState(null);
   const [needsRefresh, setNeedRefresh] = useState(false);
@@ -78,8 +80,8 @@ const UpdateProfile = () => {
   return (
     <>
       <h2>Modifier l'utilisateur</h2>
-
-      {user && (
+      
+      {user && decodedToken.userId == id ? (
         <div className="container">
           <div className="updateProfile-form">
             <form onSubmit={handleUpdateProfile}>
@@ -170,6 +172,8 @@ const UpdateProfile = () => {
             </form>
           </div>
         </div>
+      ) : (
+        navigate("/")
       )}
     </>
   );
