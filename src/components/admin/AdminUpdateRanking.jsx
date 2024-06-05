@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
+import Sidebar from "./AdminSidebar";
+import "../admin/css/adminUpdate.css";
 
 const UpdateRanking = () => {
 
@@ -53,17 +55,21 @@ const UpdateRanking = () => {
   return (
     <>
       <h2>Modifier le classement</h2>
-
+      <Sidebar />
       {ranking && (
+        <div className="container"> 
+        <div className="update-form">
         <form onSubmit={handleUpdateRanking}>
-          <div>
+          <div className="input-group">
             <label>
               Nom
               <input type="text" name="name" defaultValue={ranking.name} />
             </label>
           </div>
-          <input type="submit" value="Mettre à jour" />
+          <button className="Update" type="submit">Mettre à jour</button>
         </form>
+        </div>
+        </div>
       )}
     </>
   );

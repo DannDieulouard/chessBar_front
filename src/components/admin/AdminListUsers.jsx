@@ -49,7 +49,7 @@ const AdminListUsers = () => {
           {users.map((user) => {
             return (
               <article key={user.id}>
-                {decodedToken.roleId === 1 && (
+                {decodedToken.roleId === 1 &&(
                   <section>
                   <h4>{user.username}</h4>
                   <button class="delete" onClick={(event) => handleDeleteUser(event, user.id)}>Supprimer</button>

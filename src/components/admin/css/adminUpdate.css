@@ -5,14 +5,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.signup-form {
+.update-form {
     max-width: 400px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.signup-form h2 {
+.update-form h2 {
     margin-bottom: 20px;
     color: #333;
     text-align: center;
@@ -36,7 +36,7 @@
     font-size: 16px;
 }
 
-.Create {
+.Update {
     width: 100%;
     padding: 10px;
     background-color: #654028;
@@ -48,6 +48,6 @@
     transition: background-color 0.3s;
 }
 
-.Create:hover {
+.Update:hover {
     background-color: #BE9472;
 }

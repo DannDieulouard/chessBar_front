@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
+import Sidebar from "./AdminSidebar";
+import "../admin/css/adminUpdate.css";
 
 const UpdateUser = () => {
 
@@ -67,65 +69,69 @@ const UpdateUser = () => {
   return (
     <>
       <h2>Modifier l'utilisateur</h2>
-
+      <Sidebar />
       {user && (
+        <div className="container"> 
+        <div className="update-form">
         <form onSubmit={handleUpdateUser}>
-          <div>
+          <div className="input-group">
             <label>
               Pseudo
               <input type="text" name="username" defaultValue={user.username} />
             </label>
           </div>
-          <div>
+          <div className="input-group">
             <label>
               Mot de passe
               <input type="password" name="password" defaultValue={user.password} />
             </label>
           </div>
-          <div>
+          <div className="input-group">
             <label>
               Prénom    
               <input type="text" name="surname" defaultValue={user.surname} />
             </label>
           </div>
-          <div>
+          <div className="input-group">
             <label>
               Nom de famille    
               <input type="text" name="name" defaultValue={user.name} />
             </label>
           </div>
-          <div>
+          <div className="input-group">
           <label>
               Code postal
               <input type="number" name="postCode" defaultValue={user.postCode} />
           </label>
           </div>
-          <div>
+          <div className="input-group">
           <label>
               Ville
               <input type="text" name="city" defaultValue={user.city} />
           </label>
           </div>
-          <div>
+          <div className="input-group">
           <label>
               Email
               <input type="email" name="email" defaultValue={user.email} />
           </label>
           </div>
-          <div>
+          <div className="input-group">
           <label>
               Phone
               <input type="text" name="phone" defaultValue={user.phone} />
           </label>
           </div>
-          <div>
+          <div className="input-group">
           <label>
               Comment avez-vous connu ChessBar?
               <input type="text" name="howChessbar" defaultValue={user.howChessbar} />
           </label>
           </div>
-          <input type="submit" value="Mettre à jour" />
+          <button className="Update" type="submit">Mettre à jour</button>
         </form>
+        </div>
+        </div>
       )}
     </>
   );

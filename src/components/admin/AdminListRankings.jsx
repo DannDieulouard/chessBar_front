@@ -12,6 +12,7 @@ const AdminListRankings = () => {
   const [needsRefresh, setNeedRefresh] = useState(false);
 
   const decodedToken = useVerifyToken();
+  console.log(decodedToken)
 
   useEffect(() => {
     fetch("http://localhost:5000/api/rankings", {
@@ -49,13 +50,11 @@ const AdminListRankings = () => {
           {rankings.map((ranking) => {
             return (
               <article key={ranking.id}>
-                {decodedToken.roleId === 1 && (
                   <section>
                   <h4>{ranking.name}</h4>
                   <button class="delete" onClick={(event) => handleDeleteRanking(event, ranking.id)}>Supprimer</button>
                   <button class="modify"><Link to={`/admin/rankings/update/${ranking.id}`}>Modifier</Link></button>
                 </section>
-                )}
               </article>
             );
           })}

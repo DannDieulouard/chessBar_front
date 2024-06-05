@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
+import Sidebar from "./AdminSidebar";
+import "../admin/css/adminUpdate.css";
 
 const UpdateTournament = () => {
 
@@ -57,29 +59,33 @@ const UpdateTournament = () => {
   return (
     <>
       <h2>Modifier le tournoi</h2>
-
+      <Sidebar />
       {tournament && (
+        <div className="container"> 
+        <div className="update-form">
         <form onSubmit={handleUpdateTournament}>
-          <div>
+          <div className="input-group">
             <label>
               Nom
               <input type="text" name="name" defaultValue={tournament.name} />
             </label>
           </div>
-          <div>
+          <div className="input-group">
           <label>
               Jour de jeu
               <input type="text" name="game_day" defaultValue={tournament.game_day} />
           </label>
           </div>
-          <div>
+          <div className="input-group">
           <label>
               Heure de jeu
               <input type="text" name="game_time" defaultValue={tournament.game_time} />
           </label>
           </div>
-          <input type="submit" value="Mettre à jour" />
+          <button className="Update" type="submit">Mettre à jour</button>
         </form>
+        </div>
+        </div>
       )}
     </>
   );

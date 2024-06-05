@@ -49,13 +49,11 @@ const AdminListTournaments = () => {
           {tournaments.map((tournament) => {
             return (
               <article key={tournament.id}>
-                {decodedToken.roleId === 1 && (
                   <section>
                   <h4>{tournament.name}</h4>
                   <button class="delete" onClick={(event) => handleDeleteTournament(event, tournament.id)}>Supprimer</button>
                   <button class="modify"><Link to={`/admin/tournaments/update/${tournament.id}`}>Modifier</Link></button>
                 </section>
-                )}
               </article>
             );
           })}
