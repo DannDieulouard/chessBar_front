@@ -159,11 +159,7 @@ const UpdateProfile = () => {
               </div>
               <div className="input-group">
                 <label>Comment avez-vous connu ChessBar ?</label>
-                <input
-                  type="text"
-                  name="howChessbar"
-                  defaultValue={user.howChessbar}
-                />
+                <textarea name="howChessbar" rows="5" cols="54" defaultValue={user.howChessbar}></textarea>
               </div>
               <button className="UpdateProfile" type="submit">
                 Modifier mes données

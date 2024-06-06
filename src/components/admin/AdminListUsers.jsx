@@ -40,6 +40,7 @@ const AdminListUsers = () => {
   };
   return (
     <>
+    {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
      <main>
         <h2>Les utilisateurs</h2>
         <AdminMiniHeader />
@@ -62,6 +63,11 @@ const AdminListUsers = () => {
         </section>
         </div>
       </main>
+      ) : (
+        useEffect(() => {
+          navigate("/")
+              }, [])
+       )}
     </>
   );
 };

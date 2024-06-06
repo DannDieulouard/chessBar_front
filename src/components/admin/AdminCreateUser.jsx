@@ -1,11 +1,12 @@
 import Sidebar from "./AdminSidebar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"
-
+import { useVerifyToken } from "../../utils/authGuard";
 const AdminCreateUser = () => {
 
     const [message, setMessage] = useState("");
     const navigate = useNavigate();
+    const decodedToken = useVerifyToken();
   
     const handleSignupSubmit = (e) => {
       e.preventDefault();
@@ -51,6 +52,8 @@ const AdminCreateUser = () => {
     };
 
     return (
+      <main>
+        {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
         <>
             <h2>Créer un utilisateur</h2>
             <Sidebar />
@@ -92,14 +95,19 @@ const AdminCreateUser = () => {
             </div>
             <div className="input-group">
               <label>Comment avez-vous connu ChessBar ?</label>
-              <input type="text" name="howChessbar" />
+              <textarea name="howChessbar" rows="5" cols="54"></textarea>
             </div>
             <button className="Create" type="submit">Créer</button>
           </form>
           </div>
           </div>
-
         </>
+        ) : (
+          useEffect(() => {
+            navigate("/")
+                }, [])
+         )}
+        </main>
     )
 }
 

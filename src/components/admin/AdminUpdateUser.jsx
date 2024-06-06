@@ -11,7 +11,7 @@ const UpdateUser = () => {
 
   const [user, setUser] = useState(null);
 
-  useVerifyToken();
+  const decodedToken = useVerifyToken();
 
   useEffect(() => {
     fetch("http://localhost:5000/api/users/" + id, {
@@ -67,6 +67,8 @@ const UpdateUser = () => {
   };
 
   return (
+    <main>
+      {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
     <>
       <h2>Modifier l'utilisateur</h2>
       <Sidebar />
@@ -125,7 +127,7 @@ const UpdateUser = () => {
           <div className="input-group">
           <label>
               Comment avez-vous connu ChessBar?
-              <input type="text" name="howChessbar" defaultValue={user.howChessbar} />
+              <textarea name="howChessbar" rows="5" cols="54" defaultValue={user.howChessbar}></textarea>
           </label>
           </div>
           <button className="Update" type="submit">Mettre à jour</button>
@@ -134,6 +136,12 @@ const UpdateUser = () => {
         </div>
       )}
     </>
+    ) : (
+      useEffect(() => {
+        navigate("/")
+            }, [])
+     )}
+    </main>
   );
 };
 

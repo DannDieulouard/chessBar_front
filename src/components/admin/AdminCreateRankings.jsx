@@ -1,7 +1,10 @@
 import Sidebar from "./AdminSidebar";
 import { useNavigate } from "react-router-dom";
+import { useVerifyToken } from "../../utils/authGuard";
+import { useEffect } from 'react';
 
 const AdminCreateRankings = () => {
+  const decodedToken = useVerifyToken();
     const navigate = useNavigate();
 
     const handleCreateRanking = (event) => {
@@ -31,6 +34,8 @@ const AdminCreateRankings = () => {
       });
   };
     return (
+      <main>
+        {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
         <>
             <h2>Créer un classement</h2>
             <Sidebar />
@@ -48,6 +53,12 @@ const AdminCreateRankings = () => {
           </div>
           </div>
         </>
+        ) : (
+          useEffect(() => {
+            navigate("/")
+                }, [])
+         )}
+        </main>
     )
 }
 

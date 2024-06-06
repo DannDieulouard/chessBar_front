@@ -11,7 +11,7 @@ const AdminListBars = () => {
   const navigate = useNavigate();
   const [needsRefresh, setNeedRefresh] = useState(false);
 
-  useVerifyToken();
+  const decodedToken = useVerifyToken();
 
   useEffect(() => {
     fetch("http://localhost:5000/api/bars", {
@@ -40,6 +40,7 @@ const AdminListBars = () => {
   };
   return (
     <>
+    {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
       <main>
         <h2>Les bars</h2>
         <AdminMiniHeader />
@@ -61,6 +62,11 @@ const AdminListBars = () => {
         </section>
         </div>
       </main>
+      ) : (
+        useEffect(() => {
+          navigate("/")
+              }, [])
+       )}
     </>
   );
 };

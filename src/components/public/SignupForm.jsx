@@ -90,7 +90,7 @@ const SignupForm = () => {
             </div>
             <div className="input-group">
               <label>Comment avez-vous connu ChessBar ?</label>
-              <input type="text" name="howChessbar" />
+              <textarea name="howChessbar" rows="5" cols="54"></textarea>
             </div>
             <button className="Signup" type="submit">Sign up !</button>
           </form>

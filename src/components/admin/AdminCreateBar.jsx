@@ -1,8 +1,10 @@
 import { useNavigate } from "react-router-dom";
 import Sidebar from "./AdminSidebar";
+import { useVerifyToken } from "../../utils/authGuard";
+import { useEffect } from 'react';
 
 const CreateBar = () => {
-
+  const decodedToken = useVerifyToken();
   const navigate = useNavigate();
 
     const handleCreateBar = (event) => {
@@ -48,6 +50,8 @@ const CreateBar = () => {
   };
     
       return (
+        <main>
+          {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
         <>
           <h2>Créer un bar</h2>
             <Sidebar />
@@ -109,6 +113,12 @@ const CreateBar = () => {
           </div>
           </div>
         </>
+        ) : (
+          useEffect(() => {
+            navigate("/")
+                }, [])
+         )}
+        </main>
       );
     };
 export default CreateBar;

@@ -11,7 +11,7 @@ const UpdateTournament = () => {
 
   const [tournament, setTournament] = useState(null);
 
-  useVerifyToken();
+  const decodedToken = useVerifyToken();
 
   useEffect(() => {
     fetch("http://localhost:5000/api/tournaments/" + id, {
@@ -57,6 +57,8 @@ const UpdateTournament = () => {
   };
 
   return (
+    <main>
+      {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
     <>
       <h2>Modifier le tournoi</h2>
       <Sidebar />
@@ -88,6 +90,12 @@ const UpdateTournament = () => {
         </div>
       )}
     </>
+    ) : (
+      useEffect(() => {
+        navigate("/")
+            }, [])
+     )}
+    </main>
   );
 };
 

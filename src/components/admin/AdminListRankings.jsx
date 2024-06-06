@@ -12,7 +12,7 @@ const AdminListRankings = () => {
   const [needsRefresh, setNeedRefresh] = useState(false);
 
   const decodedToken = useVerifyToken();
-  console.log(decodedToken)
+
 
   useEffect(() => {
     fetch("http://localhost:5000/api/rankings", {
@@ -41,6 +41,7 @@ const AdminListRankings = () => {
   };
   return (
     <>
+    {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
       <main>
         <h2>Les classements</h2>
         <AdminMiniHeader />
@@ -61,6 +62,11 @@ const AdminListRankings = () => {
         </section>
         </div>
       </main>
+      ) : (
+        useEffect(() => {
+          navigate("/")
+              }, [])
+       )}
     </>
   );
 };

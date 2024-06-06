@@ -11,7 +11,7 @@ const UpdateRanking = () => {
 
   const [ranking, setRanking] = useState(null);
 
-  useVerifyToken();
+  const decodedToken = useVerifyToken();
 
   useEffect(() => {
     fetch("http://localhost:5000/api/rankings/" + id, {
@@ -53,6 +53,8 @@ const UpdateRanking = () => {
   };
 
   return (
+    <main>
+    {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
     <>
       <h2>Modifier le classement</h2>
       <Sidebar />
@@ -72,6 +74,12 @@ const UpdateRanking = () => {
         </div>
       )}
     </>
+    ) : (
+      useEffect(() => {
+        navigate("/")
+            }, [])
+     )}
+    </main>
   );
 };
 

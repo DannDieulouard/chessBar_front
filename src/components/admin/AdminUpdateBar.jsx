@@ -11,7 +11,7 @@ const UpdateBar = () => {
 
   const [bar, setBar] = useState(null);
 
-  useVerifyToken();
+  const decodedToken = useVerifyToken();
 
   useEffect(() => {
     fetch("http://localhost:5000/api/bars/" + id, {
@@ -67,6 +67,8 @@ const UpdateBar = () => {
   };
 
   return (
+    <main>
+      {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
     <>
       <h2>Modifier le bar</h2>
       <Sidebar />
@@ -128,6 +130,12 @@ const UpdateBar = () => {
         </div>
       )}
     </>
+    ) : (
+      useEffect(() => {
+        navigate("/")
+            }, [])
+     )}
+    </main>
   );
 };
 
