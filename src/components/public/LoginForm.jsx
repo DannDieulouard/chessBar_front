@@ -45,11 +45,11 @@ const LoginForm = () => {
       <div className="login-form">
       <form onSubmit={handleLoginSubmit}>
       <div className="input-group">
-                    <label for="username">Username</label>
+                    <label for="username">Pseudo</label>
                     <input type="text" id="username" name="username" required />
       </div>
                 <div className="input-group">
-                    <label for="password">Password</label>
+                    <label for="password">Mot de passe</label>
                     <input type="password" id="password" name="password" required />
                 </div>
                 <button className="Login" type="submit">Login</button>

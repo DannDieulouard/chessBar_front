@@ -72,7 +72,7 @@ const CreateBar = () => {
             </div>
             <div className="input-group">
               <label>
-                Ville
+                Métropole de rattachement
                 <input type="text" name="city" />
               </label>
             </div>

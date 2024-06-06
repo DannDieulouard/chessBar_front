@@ -1,0 +1,36 @@
+.tournaments {
+    margin-top: 50px;
+    margin-left: 240px;
+    margin-bottom: 150px;
+    width: 900px;
+    height: 110px;
+    background-color: white;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.tournamentAccess {
+    width: 90px;
+    height: 20px;
+    padding: 10px 20px;
+    background-color: #bb8e6b;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-radius: 50px;
+}
+
+.tournamentAccess:hover {
+    background-color: goldenrod;
+}
+
+.tournamentAccess a {
+    color: white;
+    text-decoration: none;
+}

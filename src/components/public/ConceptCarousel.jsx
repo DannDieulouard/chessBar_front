@@ -23,9 +23,9 @@ const ConceptCarousel = () => {
 
     return (
     <div className="carousel">
-        <button onClick={prevSlide}>Previous</button>
+        <button className="previous" onClick={prevSlide}></button>
         <img src={images[currentIndex]} alt={`Slide ${currentIndex}`} />
-        <button onClick={nextSlide}>Next</button>
+        <button className="next" onClick={nextSlide}></button>
     </div>
     );
 };
