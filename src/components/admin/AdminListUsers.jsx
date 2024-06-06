@@ -52,8 +52,8 @@ const AdminListUsers = () => {
                 {decodedToken.roleId === 1 &&(
                   <section>
                   <h4>{user.username}</h4>
-                  <button class="delete" onClick={(event) => handleDeleteUser(event, user.id)}>Supprimer</button>
-                  <button class="modify"><Link to={`/admin/users/update/${user.id}`}>Modifier</Link></button>
+                  <button className="delete" onClick={(event) => handleDeleteUser(event, user.id)}>Supprimer</button>
+                  <button className="modify"><Link to={`/admin/users/update/${user.id}`}>Modifier</Link></button>
                 </section>
                 )}
               </article>

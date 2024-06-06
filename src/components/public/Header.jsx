@@ -1,5 +1,5 @@
 import "../public/css/header.css";
-import { Link, useParams } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useEffect, useState } from 'react';
 import Cookies from 'js-cookie';
 import { useVerifyToken } from "../../utils/authGuard";
@@ -10,17 +10,27 @@ const checkCookie = (access_token) => {
 
 const Header = () => {
   const [hasCookie, setHasCookie] = useState(false);
-
-  const decodedToken = useVerifyToken()
+  const decodedToken = useVerifyToken();
+  console.log(decodedToken)
 
   useEffect(() => {
     const cookieExists = checkCookie('access_token');
     setHasCookie(cookieExists);
   }, []);
 
+  const toggleMenu = () => {
+    const menu = document.querySelector('.menu');
+    menu.classList.toggle('show');
+  };
+
   return (
     <>
       <nav>
+        <div className="burger" onClick={toggleMenu}>
+          <div className="line"></div>
+          <div className="line"></div>
+          <div className="line"></div>
+        </div>
         <ul className="menu">
           <li><Link to="/">ACCUEIL</Link></li>
           <li><Link to="/concept">CONCEPT</Link></li>
@@ -30,17 +40,17 @@ const Header = () => {
           <li><Link to="/rules">RÈGLEMENT</Link></li>
           {hasCookie ? (
             <>
-              <section>
+              <li>
                 <button className="profile">
                   <Link to={`/profile/update/${decodedToken.userId}`}></Link>
                 </button>
-              </section>
-              <section>
+              </li>
+              <li>
                 <button className="logout"><Link to="/logout"></Link></button>
-              </section>
+              </li>
             </>
           ) : (
-            <button className="login"><Link to="/login"></Link></button>
+            <li><button className="login"><Link to="/login"></Link></button></li>
           )}
         </ul>
       </nav>

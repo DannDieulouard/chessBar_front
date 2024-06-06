@@ -1,13 +1,10 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../public/css/loginform.css";
-import { useVerifyToken } from "../../utils/authGuard";
 
 const LoginForm = () => {
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
-
-  const decodedToken = useVerifyToken()
 
   const handleLoginSubmit = (event) => {
     event.preventDefault();

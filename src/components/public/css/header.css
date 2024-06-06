@@ -1,68 +1,6 @@
-/* Configuration de la nav bar */
-
-.menu {
-    background-color: white;
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-.menu li {
-    margin: 1rem;
-}
-
-.menu a {
-    color: black;
-    font-weight: bold;
-    padding-right: 1rem;
-    text-decoration: none;
-}
-
-.menu a:hover {
-    color: goldenrod;
-    font-weight: bold;
-    padding-right: 1rem;
-}
-
-.login {
-    background-image: url(../../public/images/header/login_icon.svg);
-    background-color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-color: transparent;
-    height: 30px;
-    width: 30px;
-}
-
-.profile {
-    background-image: url(../../public/images/header/profile.svg);
-    background-color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-color: transparent;
-    height: 30px;
-    width: 30px;
-}
-
-.logout {
-    background-image: url(../../public/images/header/logout.svg);
-    background-color: white;
-    background-size: cover;
-    background-repeat: no-repeat;
-    border-color: transparent;
-    height: 30px;
-    width: 30px;
-}
-
-.menu section {
-    margin: 1rem;
-}
-
-/* Configuration de la banner*/
-
-header {
+/* Basic styling */
+  
+  header {
     height: 420px;
     background-image: url(../../public/images/header/newbanner.jpg);
     background-size: cover;
@@ -71,21 +9,21 @@ header {
     justify-content: center;
     background-position: center;
     flex-direction: column;
-    align-items:flex-start;
+    align-items: flex-start;
     flex-wrap: wrap;
-
-}
-.bannerlogo {
+  }
+  
+  .bannerlogo {
     background-image: url(../../public/images/header/logo.svg);
-    width: 25%;
+    width: 45%;
     height: 25%;
     background-size: cover;
     text-align: center;
     padding-left: 2rem;
     padding-bottom: 2rem;
-}
-
-header h1 {
+  }
+  
+  header h1 {
     color: white;
     font-size: 25px;
     position: relative;
@@ -93,5 +31,155 @@ header h1 {
     font-weight: bolder;
     margin-top: 20px;
     padding-left: 4px;
-}
+  }
+  
+  /* Menu styles */
+  nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    background: white;
+    color: black;
+  }
+  
+  .burger {
+    cursor: pointer;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    padding: 0;
+    z-index: 10;
+  }
+  
+  .burger .line {
+    width: 100%;
+    height: 3px;
+    background-color: black;
+  }
+  
+  .menu {
+    background-color: white;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+  }
+  
+  .menu li {
+    margin: 1rem;
+  }
+  
+  .menu a {
+    color: black;
+    font-weight: bold;
+    padding-right: 1rem;
+    text-decoration: none;
+  }
+  
+  .menu a:hover {
+    color: goldenrod;
+  }
+  
+  .login, .profile, .logout, .admin {
+    background-color: white;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    height: 30px;
+    width: 30px;
+  }
+  
+  .login {
+    background-image: url(../../public/images/header/login_icon.svg);
+  }
+
+  .admin {
+    background-image: url(../../public/images/header/admin.png);
+  }
+  
+  .profile {
+    background-image: url(../../public/images/header/profile.svg);
+  }
+  
+  .logout {
+    background-image: url(../../public/images/header/logout.svg);
+  }
+  
+  .menu section {
+    margin: 1rem;
+  }
+  
+  /* Responsive media queries */
+  @media (max-width: 768px) {
+    .burger {
+      display: flex;
+    }
+  
+    .menu {
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background: #333;
+      width: 100%;
+      height: 0;
+      overflow: hidden;
+      transition: height 0.3s;
+    }
+  
+    .menu.show {
+      height: calc(100vh - 60px);
+    }
+  
+    .menu li {
+      width: 100%;
+      text-align: center;
+      margin: 10px 0;
+    }
+  
+    .menu a, .menu button {
+      color: white;
+    }
+  }
+  
+  @media (min-width: 769px) {
+    .burger {
+      display: none;
+    }
+  
+    .menu {
+      flex-direction: row;
+      height: auto;
+      position: static;
+      background: none;
+    }
+  
+    .menu.show {
+      height: auto;
+    }
+  
+    .menu li {
+      margin: 0 10px;
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    header h1 {
+      font-size: 32px;
+    }
+  
+    .bannerlogo {
+      width: 550px;
+      height: 200px;
+    }
+  }
+  
 
