@@ -8,7 +8,6 @@ import { useEffect } from 'react';
 const AdminDashboard = () => {
   const navigate = useNavigate();
   const decodedToken = useVerifyToken();
-  console.log(decodedToken)
 
   return (
     <main>

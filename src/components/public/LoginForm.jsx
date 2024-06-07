@@ -52,9 +52,9 @@ const LoginForm = () => {
                     <label for="password">Mot de passe</label>
                     <input type="password" id="password" name="password" required />
                 </div>
-                <button className="Login" type="submit">Login</button>
+                <button className="Login" type="submit">Connexion</button>
       </form>
-      <p>Pas encore de compte? Veuillez en créer un ici : <Link to="/signup">Sign up !</Link></p>
+      <p className="signupText">Pas encore de compte? Je m'inscris !<Link className="signupAccess" to="/signup"></Link></p>
       </div>
     </div>
     </>

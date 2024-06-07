@@ -102,3 +102,19 @@ h3 {
 p {
     line-height: 1rem;
 }
+
+/* Responsive media queries */
+@media (max-width: 768px) {
+    .intro {
+        margin: auto;
+      }
+  }
+  
+  @media (min-width: 769px) {
+  
+  }
+  
+  @media (min-width: 1024px) {
+
+  
+  }

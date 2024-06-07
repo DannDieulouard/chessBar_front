@@ -11,7 +11,6 @@ const checkCookie = (access_token) => {
 const Header = () => {
   const [hasCookie, setHasCookie] = useState(false);
   const decodedToken = useVerifyToken();
-  console.log(decodedToken)
 
   useEffect(() => {
     const cookieExists = checkCookie('access_token');

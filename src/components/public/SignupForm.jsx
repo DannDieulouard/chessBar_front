@@ -92,7 +92,7 @@ const SignupForm = () => {
               <label>Comment avez-vous connu ChessBar ?</label>
               <textarea name="howChessbar" rows="5" cols="54"></textarea>
             </div>
-            <button className="Signup" type="submit">Sign up !</button>
+            <button className="Signup" type="submit">Envoyer</button>
           </form>
           </div>
           </div>
