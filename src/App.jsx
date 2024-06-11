@@ -1,3 +1,4 @@
+import React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import HomePage from "./pages/public/HomePage";
@@ -26,6 +27,7 @@ import AdminListRankingsPage from "./pages/admin/AdminListRankingsPage";
 import AdminCreateRankingsPage from "./pages/admin/AdminCreateRankingsPage";
 import AdminUpdateRankingPage from "./pages/admin/AdminUpdateRankingPage";
 import UpdateProfilePage from "./pages/public/ProfilePage";
+import NotFoundPage from "./pages/public/NotFoundPage";
 
 function App() {
   
@@ -33,6 +35,7 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
+        <Route path="*" element={<NotFoundPage />} /> {/* This will catch all undefined routes */}
         <Route path="/concept" element={<ConceptPage />} />
         <Route path="/cities" element={<ListCitiesPage />} />
         <Route path="/cities/details/:id" element={<DetailsCitiesPage />} />
