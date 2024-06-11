@@ -16,7 +16,7 @@
     width: 90px;
     height: 20px;
     padding: 10px 20px;
-    background-color: #bb8e6b;
+    background-color: #654028;
     color: white;
     text-decoration: none;
     text-align: center;
@@ -27,5 +27,5 @@
 }
 
 .rankingAccess:hover {
-    background-color: goldenrod;
+    background-color: #BE9472;
 }

@@ -1,8 +1,7 @@
-// src/components/NotFoundPage.js
 import React from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../../components/public/images/footer/logo.svg';
-import './css/notfoundpage.css'; // Assuming you create a CSS file for styles
+import './css/notfoundpage.css'; 
 
 const NotFoundPage = () => {
   return (

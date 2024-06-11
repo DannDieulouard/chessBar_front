@@ -18,7 +18,7 @@
 .subscribe {
     width: 90px;
     height: 20px;
-    background-color: #bb8e6b;
+    background-color: #654028;
     padding: 10px 20px;
     margin-left: auto;
     margin-right: auto;
@@ -33,5 +33,5 @@
 }
 
 .subscribe:hover {
-    background-color: goldenrod;
+    background-color: #BE9472;
 }
