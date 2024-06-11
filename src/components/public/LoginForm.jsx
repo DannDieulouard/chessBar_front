@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "../public/css/loginform.css";
+import Swal from 'sweetalert2'
 
 const LoginForm = () => {
   const [message, setMessage] = useState("");
@@ -30,9 +31,41 @@ const LoginForm = () => {
       if (response.status === 200) {
         setMessage("Connexion Réussie")
         navigate('/admin')
+          const Toast = Swal.mixin({
+            toast: true,
+            position: 'top-end',
+            showConfirmButton: false,
+            timer: 3000,
+            timerProgressBar: true,
+            didOpen: (toast) => {
+              toast.addEventListener('mouseenter', Swal.stopTimer);
+              toast.addEventListener('mouseleave', Swal.resumeTimer);
+            }
+          });
+      
+          Toast.fire({
+            icon: 'success',
+            title: 'Connexion réussie !'
+          });
       }
       else {
         setMessage("Connexion refusée");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          }
+        });
+    
+        Toast.fire({
+          icon: 'error',
+          title: 'Identifiants invalides.'
+        });
       }
     }
   )
@@ -40,7 +73,6 @@ const LoginForm = () => {
 
   return (
     <>
-      <p>{message}</p>
       <div className="container"> 
       <div className="login-form">
       <form onSubmit={handleLoginSubmit}>

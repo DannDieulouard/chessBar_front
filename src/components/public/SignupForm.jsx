@@ -1,9 +1,9 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom"
 import "../public/css/signupform.css";
+import Swal from 'sweetalert2'
 
 const SignupForm = () => {
-  const [message, setMessage] = useState("");
   const navigate = useNavigate();
 
   const handleSignupSubmit = (e) => {
@@ -43,8 +43,39 @@ const SignupForm = () => {
     }).then((response) => {
       if (response.status === 200) {
         navigate('/login')
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          }
+        });
+    
+        Toast.fire({
+          icon: 'success',
+          title: 'Compte créé !'
+        });
       } else {
-        setMessage("Connexion refusée");
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          }
+        });
+    
+        Toast.fire({
+          icon: 'error',
+          title: 'Identifiants invalides. Veuillez vous reconnecter!'
+        });
       }
     });
   };
@@ -52,20 +83,28 @@ const SignupForm = () => {
   return (
     <>
       <h2>Créez votre nouveau compte </h2>
-      <p>{message}</p>
+      <h6>*Champ obligatoire</h6>
       <div className="container"> 
       <div className="signup-form">
       <form onSubmit={handleSignupSubmit}>
             <div className="input-group">
-              <label>Prénom</label>
+              <label>Prénom*</label>
               <input type="text" name="firstName" />
             </div>
             <div className="input-group">
-              <label>Nom</label>
+              <label>Nom*</label>
               <input type="text" name="name" />
             </div>
             <div className="input-group">
-              <label>Code postal</label>
+              <label>Pseudo* Chess.com / Lichess</label>
+              <input type="text" name="username" />
+            </div>
+            <div className="input-group">
+              <label>Email* (ex: "magnus.carlsen@gmail.com")</label>
+              <input type="email" name="email" />
+            </div>
+            <div className="input-group">
+              <label>Code postal (ex: "33000")</label>
               <input type="text" name="postCode" />
             </div>
             <div className="input-group">
@@ -73,19 +112,11 @@ const SignupForm = () => {
               <input type="text" name="city" />
             </div>
             <div className="input-group">
-              <label>Email</label>
-              <input type="email" name="email" />
-            </div>
-            <div className="input-group">
-              <label>Numéro de téléphone</label>
+              <label>Numéro de téléphone* (ex: "0799XXXXXX")</label>
               <input type="text" name="phone"/>
             </div>
             <div className="input-group">
-              <label>Pseudo Chess.com / Lichess</label>
-              <input type="text" name="username" />
-            </div>
-            <div className="input-group">
-              <label>Mot de passe</label>
+              <label>Mot de passe*</label>
               <input type="password" name="password" />
             </div>
             <div className="input-group">

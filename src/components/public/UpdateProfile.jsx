@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
 import "../public/css/updateprofile.css";
+import Swal from 'sweetalert2'
 
 const UpdateProfile = () => {
   const { id } = useParams();
@@ -58,10 +59,44 @@ const UpdateProfile = () => {
       body: JSON.stringify(userData),
       credentials: "include",
     })
-      .then((response) => response.json())
-      .then(() => {
-        navigate("/");
-      });
+      .then((response) => {
+        if (response.status === 201) {
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          }
+        });
+    
+        Toast.fire({
+          icon: 'success',
+          title: 'Compte modifié !'
+        });
+        navigate("/")
+      } else {
+        setNeedRefresh(!needsRefresh);
+        const Toast = Swal.mixin({
+          toast: true,
+          position: 'top-end',
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.addEventListener('mouseenter', Swal.stopTimer);
+            toast.addEventListener('mouseleave', Swal.resumeTimer);
+          }
+        });
+    
+        Toast.fire({
+          icon: 'error',
+          title: 'Changements refusés. Un champ du formulaire est erroné.'
+        });
+      }});
   };
 
   const handleDeleteProfile = (event, id) => {
@@ -70,23 +105,42 @@ const UpdateProfile = () => {
       credentials: "include",
     }).then((response) => {
       if (response.status === 200) {
-        navigate("/login");
+        Swal.fire({
+          title: "Etes-vous sûr(e)?",
+          text: "Cette action est irréversible !",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonColor: "#3085d6",
+          cancelButtonColor: "#d33",
+          confirmButtonText: "Oui, je veux le supprimer !",
+          cancelButtonText: "Annuler"
+        }).then((result) => {
+          if (result.isConfirmed) {
+            Swal.fire({
+              title: "Supprimé !",
+              text: "Votre compte a bien été supprimé.",
+              icon: "success"
+            });
+            navigate("/login")
+          }
+        });
+      } else {
+        setNeedRefresh(!needsRefresh);
+        setMessage("Connexion refusée")
       }
-
-      setNeedRefresh(!needsRefresh);
     });
   };
 
   return (
     <>
       <h2>Modifier l'utilisateur</h2>
-      
+      <h6>*Champ obligatoire</h6>
       {user && decodedToken.userId == id ? (
         <div className="container">
           <div className="updateProfile-form">
             <form onSubmit={handleUpdateProfile}>
               <div className="input-group">
-                <label>Prénom</label>
+                <label>Prénom*</label>
                 <input
                   type="text"
                   name="firstName"
@@ -95,7 +149,7 @@ const UpdateProfile = () => {
                 />
               </div>
               <div className="input-group">
-                <label>Nom</label>
+                <label>Nom*</label>
                 <input
                   type="text"
                   name="name"
@@ -104,7 +158,25 @@ const UpdateProfile = () => {
                 />
               </div>
               <div className="input-group">
-                <label>Code postal</label>
+                <label>Pseudo* Chess.com / Lichess</label>
+                <input
+                  type="text"
+                  name="username"
+                  defaultValue={user.username}
+                  required
+                />
+              </div>
+              <div className="input-group">
+                <label>Email* (ex: "magnus.carlsen@gmail.com")</label>
+                <input
+                  type="email"
+                  name="email"
+                  defaultValue={user.email}
+                  required
+                />
+              </div>
+              <div className="input-group">
+                <label>Code Postal (ex: "33000")</label>
                 <input
                   type="text"
                   name="postCode"
@@ -122,16 +194,7 @@ const UpdateProfile = () => {
                 />
               </div>
               <div className="input-group">
-                <label>Email</label>
-                <input
-                  type="email"
-                  name="email"
-                  defaultValue={user.email}
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <label>Numéro de téléphone</label>
+                <label>Numéro de téléphone* (ex: "0799XXXXXX")</label>
                 <input
                   type="number"
                   name="phone"
@@ -140,16 +203,7 @@ const UpdateProfile = () => {
                 />
               </div>
               <div className="input-group">
-                <label>Pseudo Chess.com / Lichess</label>
-                <input
-                  type="text"
-                  name="username"
-                  defaultValue={user.username}
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <label>Mot de passe</label>
+                <label>Mot de passe*</label>
                 <input
                   type="password"
                   name="password"
