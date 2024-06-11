@@ -32,7 +32,7 @@ const UpdateProfile = () => {
 
     const username = event.target.username.value;
     const password = event.target.password.value;
-    const surname = event.target.surname.value;
+    const firstName = event.target.firstName.value;
     const name = event.target.name.value;
     const postCode = event.target.postCode.value;
     const city = event.target.city.value;
@@ -42,7 +42,7 @@ const UpdateProfile = () => {
     const userData = {
       username,
       password,
-      surname,
+      firstName,
       name,
       postCode,
       city,
@@ -89,8 +89,8 @@ const UpdateProfile = () => {
                 <label>Prénom</label>
                 <input
                   type="text"
-                  name="surname"
-                  defaultValue={user.surname}
+                  name="firstName"
+                  defaultValue={user.firstName}
                   required
                 />
               </div>

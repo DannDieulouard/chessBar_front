@@ -27,7 +27,7 @@ const Tournaments = () => {
             <>
             <div className="tournaments">
             <h2>Veuillez d'abord vous authentifier avant d'accéder à nos tournois !</h2>
-            <div className="tournamentAccess"><Link to="/signup">Je m'inscris!</Link></div>
+            <div className="tournamentAccess"><Link to="/login">Connexion</Link></div>
             </div>
             </>
           )}

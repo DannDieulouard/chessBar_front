@@ -14,7 +14,7 @@ const Home = () => {
         <div className="intro">
             <h1>RENCONTREZ. JOUEZ. TRIOMPHEZ !</h1>
             <p>Découvrez le monde enivrant des parties de jeu amicales ChessBar ! ChessBar vous transporte dans des conditions de jeux idéales où se mêlent joueurs amateurs et confirmés. Rencontrez, jouez et triomphez de vos adversaires et remportez le titre de champion de votre ville !</p>
-            <p className="subscribe"> <Link to="/tournaments">Je m'inscris!</Link></p> 
+            <p className="subscribe"> <Link to="/tournaments">Je m'inscris</Link></p> 
         </div>
         
         <h2>VILLES</h2>

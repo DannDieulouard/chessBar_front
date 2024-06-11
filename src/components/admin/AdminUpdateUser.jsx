@@ -30,7 +30,7 @@ const UpdateUser = () => {
 
     const username = event.target.username.value;
     const password = event.target.password.value;
-    const surname = event.target.surname.value;
+    const firstName = event.target.firstName.value;
     const name = event.target.name.value;
     const postCode = event.target.postCode.value;
     const city = event.target.city.value;
@@ -40,7 +40,7 @@ const UpdateUser = () => {
     const userData = {
       username: username,
       password: password,
-      surname: surname,
+      firstName: firstName,
       name: name,
       postCode: postCode,
       city: city,
@@ -91,7 +91,7 @@ const UpdateUser = () => {
           <div className="input-group">
             <label>
               Prénom    
-              <input type="text" name="surname" defaultValue={user.surname} />
+              <input type="text" name="firstName" defaultValue={user.firstName} />
             </label>
           </div>
           <div className="input-group">

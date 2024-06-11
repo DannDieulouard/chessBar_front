@@ -9,7 +9,7 @@ const SignupForm = () => {
   const handleSignupSubmit = (e) => {
     e.preventDefault();
 
-    const surname = e.target.surname.value
+    const firstName = e.target.firstName.value
     const name = e.target.name.value
     const postCode = e.target.postCode.value
     const city = e.target.city.value
@@ -20,7 +20,7 @@ const SignupForm = () => {
     const howChessbar = e.target.howChessbar.value
     
     const loginData = {
-          surname: surname,
+          firstName: firstName,
           name: name,
           city : city,
           email: email,
@@ -58,7 +58,7 @@ const SignupForm = () => {
       <form onSubmit={handleSignupSubmit}>
             <div className="input-group">
               <label>Prénom</label>
-              <input type="text" name="surname" />
+              <input type="text" name="firstName" />
             </div>
             <div className="input-group">
               <label>Nom</label>
