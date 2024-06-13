@@ -1,4 +1,3 @@
-/* Basic styling */
 header {
   height: 420px;
   background-image: url(../../public/images/header/newbanner.jpg);
@@ -35,7 +34,6 @@ header h1 {
   top: 60px;
 }
 
-/* Menu styles */
 nav {
   display: flex;
   justify-content: center;
@@ -65,7 +63,6 @@ nav {
   transition: all 0.3s ease;
 }
 
-/* Add the animation styles */
 .burger.open .line:nth-child(1) {
   transform: translateY(10px) rotate(45deg);
 }
@@ -129,7 +126,6 @@ nav {
   margin: 1rem;
 }
 
-/* Responsive media queries */
 @media (max-width: 768px) {
   .burger {
     display: flex;
@@ -233,6 +229,10 @@ nav {
 
   .menu.show {
     height: calc(55vh);
+  }
+
+  .menu.show li{
+    margin: 1rem;
   }
 
   .menu a, .menu button {

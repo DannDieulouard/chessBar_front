@@ -17,3 +17,9 @@
     padding-right: 1rem;
     text-decoration: none;
 }
+
+@media (max-width: 480px) {
+    .menuAdmin li {
+        margin : 0.3rem;
+    }
+}

@@ -9,14 +9,21 @@
 
 .flex_list {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-content: flex-start;
     flex-wrap: wrap;
     margin: 32px;
     height: auto;
 }
 
-/* General Button Styles */
+.flex_list article {
+    margin: 0 20px;
+}
+
+.flex_list article section h4{
+    text-align: center;
+}
+
 .button {
     font-family: Arial, sans-serif;
     font-size: 14px;
@@ -27,7 +34,6 @@
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Modify Button */
 .modify {
     background-color: #BE9472;
     color: white;
@@ -46,7 +52,6 @@
     box-shadow: none;
 }
 
-/* Delete Button */
 .delete {
     background-color: #654028;
     color: white;
