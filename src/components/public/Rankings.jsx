@@ -9,6 +9,8 @@ const Rankings = () => {
                 Cliquez ici ! 
             </a> 
         </div>
+
+        
         </>
     )
 }

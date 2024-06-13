@@ -1,8 +1,43 @@
 import "../public/css/concept.css";
 import { Link } from "react-router-dom";
-import ConceptCarousel from "./ConceptCarousel";
+import React, { useState, useEffect } from 'react';
+import { Galleria } from 'primereact/galleria';
+import { PhotosConcept } from './service/PhotosConcept';
 
 const Concept = () => {
+    const [images, setImages] = useState(null);
+
+    const responsiveOptions = [
+        {
+            breakpoint: '1024px',
+            numVisible: 5
+        },
+        {
+            breakpoint: '960px',
+            numVisible: 4
+        },
+        {
+            breakpoint: '768px',
+            numVisible: 3
+        },
+        {
+            breakpoint: '560px',
+            numVisible: 1
+        }
+    ];
+
+    useEffect(() => {
+        PhotosConcept.getImages().then(data => setImages(data));
+    }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+    const itemTemplate = (item) => {
+        return <img src={item.itemImageSrc} alt={item.alt} style={{ width: '100%', display: 'block' }} />
+    }
+
+    const thumbnailTemplate = (item) => {
+        return <img src={item.thumbnailImageSrc} alt={item.alt} style={{ display: 'block' }} />
+    }
+
     return (
         <>
             <div className="concept">
@@ -15,10 +50,12 @@ const Concept = () => {
                 <p>
                 Devenez le champion de votre bar et de votre ville !
                 </p>
-                <p className="subscribe"> <Link to="/tournaments">Je m'inscris!</Link></p> 
+                <p className="subscribe"> <Link to="/tournaments">Je m'inscris</Link></p> 
             </div>
-
-            <ConceptCarousel />
+            <div className="card">
+            <Galleria value={images} responsiveOptions={responsiveOptions} numVisible={3} circular style={{ maxWidth: '420px' }}
+                item={itemTemplate} thumbnail={thumbnailTemplate} />
+            </div>
         </>
     )
 }

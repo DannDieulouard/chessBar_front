@@ -10,6 +10,7 @@
     width: 100%;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 40px;
 }
 
 .login-form h2 {
@@ -73,3 +74,9 @@
     margin-left: auto;
     margin-right: auto;
   }
+
+  @media (max-width: 768px) {
+    .login-form {
+      margin-bottom: 60px;
+    }
+}

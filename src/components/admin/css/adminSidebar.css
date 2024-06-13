@@ -1,61 +1,106 @@
 /* Sidebar.css */
 .sidebar {
-    width: 250px;
-    height: 100vh;
-    background-color: #BE9472;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    transition: width 0.3s;
-  }
-  
-  .sidebar .MuiList-root {
-    padding: 0;
-  }
-  
-  .sidebar .MuiListItem-root {
-    color: white;
-    transition: background-color 0.3s, padding-left 0.3s;
-  }
-  
-  .sidebar .MuiListItem-root:hover {
-    background-color: #34495e;
-    padding-left: 10px;
-  }
-  
-  .sidebar .MuiListItemIcon-root {
-    color: white;
-  }
-  
-  .sidebar .MuiListItemText-primary {
-    font-size: 1.1em;
-  }
-  
-  .sidebar-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 60px;
-    background-color: #654028;
-    font-size: 1.5em;
-    font-weight: bold;
-    color: white;
-  }
-  
-  .sidebar-footer {
-    margin-top: auto;
-    padding: 10px;
-    text-align: center;
-    background-color: #654028;
-    color: white;
+  width: 250px;
+  height: 100vh;
+  background-color: #BE9472;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(-100%);
+  position: fixed;
+  z-index: 1000;
+}
+
+.sidebar.open {
+  transform: translateX(0);
+}
+
+.sidebar .MuiList-root {
+  padding: 0;
+}
+
+.sidebar .MuiListItem-root {
+  color: white;
+  transition: background-color 0.3s, padding-left 0.3s;
+}
+
+.sidebar .MuiListItem-root:hover {
+  background-color: #34495e;
+  padding-left: 10px;
+}
+
+.sidebar .MuiListItemIcon-root {
+  color: white;
+}
+
+.sidebar .MuiListItemText-primary {
+  font-size: 1.1em;
+}
+
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 60px;
+  background-color: #654028;
+  font-size: 1.5em;
+  font-weight: bold;
+  color: white;
+}
+
+.sidebar-footer {
+  margin-top: auto;
+  padding: 10px;
+  text-align: center;
+  background-color: #654028;
+  color: white;
+}
+
+.burger-menu {
+  display: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1100;
+  cursor: pointer;
+  background: #BE9472;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.burger-menu {
+  display: block;
+}
+
+.burger-menu svg {
+  color: white;
+  font-size: 2rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .burger-menu {
+    display: block;
   }
 
-  /* Hover effects and transitions for sidebar items */
-.sidebar .MuiListItem-root {
-    transition: background-color 0.3s, padding-left 0.3s;
+  .sidebar {
+    width: 200px;
+    transform: translateX(-100%);
   }
-  
-  .sidebar .MuiListItem-root:hover {
-    background-color: #34495e;
-    padding-left: 15px;
+
+  .sidebar.open {
+    transform: translateX(0);
   }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 150px;
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+}
+

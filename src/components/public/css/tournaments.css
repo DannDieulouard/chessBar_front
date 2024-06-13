@@ -1,13 +1,12 @@
 .tournaments {
     margin-top: 50px;
     margin-left: 240px;
-    margin-bottom: 150px;
-    width: 900px;
-    height: 110px;
+    width: 80%;
     background-color: white;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
 }
@@ -34,3 +33,104 @@
     color: white;
     text-decoration: none;
 }
+
+.listTournaments {
+padding: 50px;
+}
+
+.listTournaments table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  
+  .listTournaments table, th, td {
+    border: 1px solid #ddd;
+  }
+  
+  .listTournaments th, td {
+    padding: 8px;
+    text-align: left;
+  }
+  
+  .listTournaments th {
+    background-color: #f2f2f2;
+  }
+  
+  .listTournaments form {
+    background-color: #fff;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .listTournaments label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .listTournaments input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  
+  .listTournaments button {
+    width: 100%;
+    padding: 10px;
+    background-color: #654028;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .listTournaments button:hover {
+    background-color: #BE9472;
+  }
+  
+  .listTournaments button[disabled] {
+    background-color: #aaa;
+    cursor: not-allowed;
+  }
+
+  @media (max-width: 768px) {
+    .tournaments {
+      margin-bottom: 230px;
+    }
+}
+
+  @media (max-width: 470px) {
+
+    .tournaments {
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
+    .listTournaments {
+      padding: 0px;
+      }
+
+      .listTournaments table {
+        width: 100%; /* Adjust the table width */
+        font-size: 12px; /* Optional: reduce font size for better fit */
+        border-collapse: collapse;
+        margin-bottom: 20px;
+      }
+      .listTournaments th, .listTournaments td {
+        padding: 5px; /* Reduce padding for a more compact table */
+    }
+        
+        .listTournaments th, .listTournaments td {
+            padding: 5px; /* Reduce padding for a more compact table */
+        }
+        .listTournaments th:nth-child(2) {
+          display: none; /* Hide less important columns for better fit */
+      }
+        .listTournaments td:nth-child(2) {
+            display: none; /* Hide less important columns for better fit */
+        }
+    }

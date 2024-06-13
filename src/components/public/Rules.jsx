@@ -6,7 +6,7 @@ const Rules = () => {
         <div className="rules">
             <h1>REGLEMENT</h1>
         </div>
-        
+        <div className="articles"> 
 <h2>Article 1 : ORGANISATION</h2>
 
 <p>ChessBar organise des tournois d’échecs hebdomadaires gratuits et tous niveaux dans des bars de France. 
@@ -63,6 +63,7 @@ Les joueurs/joueuses acceptent d'être pris en photo/vidéo à tout moment de la
 
 <p>L’organisateur</p>
 <p>Kevin BENICHOU</p>
+</div>
         </>
     )
 }

@@ -2,7 +2,7 @@
 
 .intro {
     margin-top: 50px;
-    width: 900px;
+    width: 60%;
     height: 110px;
     background-color: white;
     margin-bottom: 200px;
@@ -103,18 +103,22 @@ p {
     line-height: 1rem;
 }
 
-/* Responsive media queries */
 @media (max-width: 768px) {
     .intro {
-        margin: auto;
-      }
-  }
-  
-  @media (min-width: 769px) {
-  
-  }
-  
-  @media (min-width: 1024px) {
+        width: 80%;
+    }
+}
 
-  
+  @media (max-width: 470px) {
+    .intro {
+        width: 100%;
+        position: relative;
+        padding-bottom: 100px;
+    }
+    .title {
+        margin-bottom: 50px;
+    }
+    .villes {
+        margin: 0;
+    }
   }

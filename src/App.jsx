@@ -27,7 +27,7 @@ import AdminListRankingsPage from "./pages/admin/AdminListRankingsPage";
 import AdminCreateRankingsPage from "./pages/admin/AdminCreateRankingsPage";
 import AdminUpdateRankingPage from "./pages/admin/AdminUpdateRankingPage";
 import UpdateProfilePage from "./pages/public/ProfilePage";
-import NotFoundPage from "./pages/public/NotFoundPage";
+import NotFoundPage from "./pages/public/NotFoundPage";  
 
 function App() {
   

@@ -2,6 +2,9 @@ import Sidebar from "./AdminSidebar";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"
 import { useVerifyToken } from "../../utils/authGuard";
+import "../admin/css/adminCreate.css";
+
+
 const AdminCreateUser = () => {
 
     const [message, setMessage] = useState("");

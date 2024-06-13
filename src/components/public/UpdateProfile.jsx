@@ -132,9 +132,9 @@ const UpdateProfile = () => {
   };
 
   return (
-    <>
+    <><div className="updateProfile">
       <h2>Modifier l'utilisateur</h2>
-      <h6>*Champ obligatoire</h6>
+      <h4>*Champ obligatoire</h4>
       {user && decodedToken.userId == id ? (
         <div className="container">
           <div className="updateProfile-form">
@@ -225,6 +225,7 @@ const UpdateProfile = () => {
       ) : (
         navigate("/")
       )}
+      </div>
     </>
   );
 };

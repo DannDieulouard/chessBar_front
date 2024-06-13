@@ -18,14 +18,16 @@ const Header = () => {
   }, []);
 
   const toggleMenu = () => {
+    const burger = document.getElementById('burger');
     const menu = document.querySelector('.menu');
+    burger.classList.toggle('open');
     menu.classList.toggle('show');
   };
 
   return (
     <>
       <nav>
-        <div className="burger" onClick={toggleMenu}>
+        <div id="burger" className="burger" onClick={toggleMenu}>
           <div className="line"></div>
           <div className="line"></div>
           <div className="line"></div>

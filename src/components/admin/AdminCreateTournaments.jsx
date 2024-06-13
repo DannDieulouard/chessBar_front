@@ -2,6 +2,7 @@ import Sidebar from "./AdminSidebar";
 import { useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
 import { useEffect } from 'react';
+import "../admin/css/adminCreate.css";
 
 const AdminCreateTournaments = () => {
   const decodedToken = useVerifyToken();
@@ -69,6 +70,41 @@ const AdminCreateTournaments = () => {
                 <input type="text" name="game_time"/>
               </label>
               </div>
+              <div className="input-group">
+          <label>
+              Joueur 1
+              <input type="text" name="player_1"/>
+          </label>
+          </div>
+          <div className="input-group">
+          <label>
+              Joueur 2
+              <input type="text" name="player_2"/>
+          </label>
+          </div>          <div className="input-group">
+          <label>
+              Joueur 3
+              <input type="text" name="player_3"/>
+          </label>
+          </div>
+          <div className="input-group">
+          <label>
+              Joueur 4
+              <input type="text" name="player_4"/>
+          </label>
+          </div>          
+          <div className="input-group">
+          <label>
+              Joueur 5
+              <input type="text" name="player_5"/>
+          </label>
+          </div>          
+          <div className="input-group">
+          <label>
+              Joueur 6
+              <input type="text" name="player_6"/>
+          </label>
+          </div>
             <button className="Create" type="submit">Créer</button>
           </form>
           </div>

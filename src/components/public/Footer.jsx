@@ -22,7 +22,7 @@ const Footer = () => {
                         <img src={facebookLogo} alt="Facebook" className="facebook-icon" />
                         </a>
                      </div>
-                     <p>© 2024 ChessBar, tous droits réservés.</p>
+                     <p>© 2024 ChessBar tous droits réservés.</p>
                 </div>
         </footer>
         </>

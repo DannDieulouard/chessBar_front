@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
 import Sidebar from "./AdminSidebar";
 import AdminMiniHeader from "./AdminMiniHeader";
@@ -10,21 +9,15 @@ const AdminListBars = () => {
   const [bars, setBars] = useState([]);
   const navigate = useNavigate();
   const [needsRefresh, setNeedRefresh] = useState(false);
-
   const decodedToken = useVerifyToken();
 
   useEffect(() => {
     fetch("http://localhost:5000/api/bars", {
       method: "GET",
     })
-      .then((response) => {
-        return response.json();
-      })
-      .then((barsData) => {
-        setBars(barsData.data);
-      });
+      .then((response) => response.json())
+      .then((barsData) => setBars(barsData.data));
   }, [needsRefresh]);
-
 
   const handleDeleteBar = (event, barId) => {
     fetch("http://localhost:5000/api/bars/" + barId, {
@@ -34,40 +27,38 @@ const AdminListBars = () => {
       if (response.status === 401) {
         navigate("/login");
       }
-
       setNeedRefresh(!needsRefresh);
     });
   };
+
   return (
     <>
-    {decodedToken.roleId == 1 || decodedToken.roleId == 2 ? (
-      <main>
-        <h2>Les bars</h2>
-        <AdminMiniHeader />
-        <div className="flex_dashboard">
-        <aside><Sidebar /></aside>
-        <section className="flex_list">
-          {bars.map((bar) => {
-            return (
-              <article key={bar.id}>
+      {decodedToken.roleId === 1 || decodedToken.roleId === 2 ? (
+        <main className="admin-main">
+          <h2>Les bars</h2>
+          <AdminMiniHeader />
+          <div className="flex_dashboard">
+            <aside className="sidebar-container"><Sidebar /></aside>
+            <section className="flex_list">
+              {bars.map((bar) => (
+                <article key={bar.id}>
                   <section>
                     <h4>{bar.name}</h4>
                     <button className="delete" onClick={(event) => handleDeleteBar(event, bar.id)}>Supprimer</button>
                     <button className="modify"><Link to={`/admin/bars/update/${bar.id}`}>Modifier</Link></button>
                   </section>
-                
-              </article>
-            );
-          })}
-        </section>
-        </div>
-      </main>
+                </article>
+              ))}
+            </section>
+          </div>
+        </main>
       ) : (
         useEffect(() => {
-          navigate("/")
-              }, [])
-       )}
+          navigate("/");
+        }, [])
+      )}
     </>
   );
 };
+
 export default AdminListBars;

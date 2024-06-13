@@ -2,6 +2,7 @@ import Sidebar from "./AdminSidebar";
 import { useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
 import { useEffect } from 'react';
+import "../admin/css/adminCreate.css";
 
 const AdminCreateRankings = () => {
   const decodedToken = useVerifyToken();

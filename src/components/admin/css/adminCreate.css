@@ -5,14 +5,14 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.updateProfile-form {
+.update-form {
     max-width: 400px;
     width: 100%;
     margin-left: auto;
     margin-right: auto;
 }
 
-.updateProfile-form h2 {
+.update-form h2 {
     margin-bottom: 20px;
     color: #333;
     text-align: center;
@@ -36,7 +36,7 @@
     font-size: 16px;
 }
 
-.UpdateProfile {
+.Create {
     width: 100%;
     padding: 10px;
     background-color: #654028;
@@ -48,31 +48,6 @@
     transition: background-color 0.3s;
 }
 
-.UpdateProfile:hover {
+.Create:hover {
     background-color: #BE9472;
-}
-
-.DeleteProfile {
-    width: 100%;
-    padding: 10px;
-    background-color: rgb(252, 67, 67);
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-    margin-top: 10px;
-    transition: background-color 0.3s;
-}
-
-.DeleteProfile:hover {
-    background-color: red;
-}
-
-.updateProfile h4 {
-    text-align: center;
-}
-
-textarea {
-    width: 100%
 }

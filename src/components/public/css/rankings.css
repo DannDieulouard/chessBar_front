@@ -1,9 +1,8 @@
 .rankings {
     margin-top: 50px;
     margin-left: 240px;
-    margin-bottom: 150px;
-    width: 900px;
-    height: 110px;
+    margin-top: 80px;
+    margin-bottom: 80px;
     background-color: white;
     text-align: center;
     margin-left: auto;
@@ -28,4 +27,11 @@
 
 .rankingAccess:hover {
     background-color: #BE9472;
+}
+
+@media (max-width: 768px) {
+    .rankings {
+        margin-top: 160px;
+        margin-bottom: 160px;
+    }
 }
