@@ -12,7 +12,7 @@
     justify-content: space-around;
     align-content: flex-start;
     flex-wrap: wrap;
-    margin: 32px;
+    margin: 0 100px;
     height: auto;
 }
 
@@ -64,3 +64,37 @@
 .delete:active {
     box-shadow: none;
 }
+
+.flex_list h3 {
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .flex_list article {
+    margin-bottom: 15px;
+  }
+  
+  .search-bar {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .search-bar input {
+    width: 20%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  @media (max-width: 768px) {
+    .search-bar input {
+      width: 40%;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .search-bar input {
+      width: 30%;
+    }
+  }

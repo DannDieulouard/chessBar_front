@@ -18,8 +18,51 @@
     text-decoration: none;
 }
 
+.searchBar {
+    display: flex;
+    align-items: center;
+    background-color: #f0f0f0;
+    border-radius: 25px;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto;
+  }
+  
+  .searchBar input {
+    border: none;
+    outline: none;
+    background: none;
+    padding: 10px;
+    font-size: 16px;
+    width: 100%;
+    color: #333;
+  }
+  
+  .searchBar input::placeholder {
+    color: #aaa;
+  }
+  
+  .searchBar .search {
+    width: 20px;
+    height: 20px;
+    background-image: url('path-to-your-search-icon.png'); /* Replace with the path to your search icon */
+    background-size: cover;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+  
+  .searchBar input:focus + .search {
+    /* Optional: Add some focus effect to the search icon when input is focused */
+    filter: brightness(0.8);
+  }
+
+
 @media (max-width: 480px) {
     .menuAdmin li {
         margin : 0.3rem;
+    }
+    .searchBar {
+      max-width: 300px;
     }
 }
