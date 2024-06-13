@@ -2,7 +2,7 @@
   "name": "chessbar_front",
   "private": true,
   "version": "0.1.0",
-  "homepage": "https://danndieulouard.github.io/chessBar_front/",
+  "homepage": "https://danndieulouard.github.io/chessBar_front",
   "type": "module",
   "scripts": {
     "dev": "vite",
