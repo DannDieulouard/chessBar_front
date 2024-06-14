@@ -46,7 +46,7 @@ Ensure you have the following software installed:
    ```sh
     npm start
 
-3. Open your web browser and navigate to http://localhost:3000 to see the application running.
+2. Open your web browser and navigate to http://localhost:3000 to see the application running.
 
 ### Project Structure
 
@@ -71,6 +71,7 @@ chessBar_front/
 │   └── ...
 ├── package.json
 └── README.md
+```
 
 public/: Contains static assets like HTML, images, etc.
 src/: Contains the main source code for the application.
@@ -118,14 +119,17 @@ We welcome contributions! Please follow these steps to contribute:
 2. Create a new branch:
 ```sh
 git checkout -b feature/chessBar_front
+```
 
 3. Make your changes and commit them:
 ```sh
 git commit -m 'Add some feature'
+```
 
 4. Make your changes and commit them:
 ```sh
 git push origin feature/your-feature-name
+```
 
 5. Open a pull request.
 
@@ -135,5 +139,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ### Acknowledgements
 
-[React](https://reactjs.org/)
-[Node.js](https://nodejs.org/en)
+- [React](https://reactjs.org/)
+- [Node.js](https://nodejs.org/en)
