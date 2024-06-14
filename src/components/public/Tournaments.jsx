@@ -74,6 +74,7 @@ const Tournaments = () => {
             {hasCookie ? (
                 <div className="tournaments">
                     <h1>INSCRIPTIONS TOURNOIS</h1>
+                    <h4>Un tournoi vous engage. Merci de contacter un admin pour tout désistement jusqu'à 24h avant les parties. Merci !</h4>
                     <article className="listTournaments">
                         <table>
                             <thead>

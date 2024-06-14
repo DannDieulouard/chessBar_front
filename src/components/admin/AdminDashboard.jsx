@@ -1,10 +1,9 @@
-// AdminDashboard.jsx
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { useVerifyToken } from "../../utils/authGuard";
 import Sidebar from "./AdminSidebar";
 import AdminMiniHeader from "./AdminMiniHeader";
-import './css/adminDashboard.css';
+import "./css/adminDashboard.css";
 
 const AdminDashboard = () => {
   const [bars, setBars] = useState([]);
@@ -54,15 +53,15 @@ const AdminDashboard = () => {
     });
   };
 
-  const filteredBars = bars.filter(bar =>
+  const filteredBars = bars.filter((bar) =>
     bar.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const filteredUsers = users.filter(user =>
+  const filteredUsers = users.filter((user) =>
     user.username.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
-  const filteredTournaments = tournaments.filter(tournament =>
+  const filteredTournaments = tournaments.filter((tournament) =>
     tournament.name.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
@@ -73,8 +72,30 @@ const AdminDashboard = () => {
           <h2>Admin Dashboard</h2>
           <AdminMiniHeader searchQuery={searchQuery} setSearchQuery={setSearchQuery} />
           <div className="flex_dashboard">
-            <aside><Sidebar /></aside>
-            <section className="flex_list">
+            <aside>
+              <Sidebar />
+            </aside>
+            <div className="kpi-container">
+                {/* Display number of bars */}
+                <div className="kpi-card">
+                  <h2>{bars.length}</h2>
+                  <p>Bars référencés</p>
+                </div>
+
+                {/* Display number of users */}
+                <div className="kpi-card">
+                  <h2>{users.length}</h2>
+                  <p>Utilisateurs inscrits</p>
+                </div>
+
+                {/* Display number of tournaments */}
+                <div className="kpi-card">
+                  <h2>{tournaments.length}</h2>
+                  <p>Tournois actifs</p>
+                </div>
+              </div>
+          </div>
+          <section className="flex_list">
               {searchQuery && (
                 <>
                   {filteredBars.length > 0 && (
@@ -83,36 +104,71 @@ const AdminDashboard = () => {
                         <article key={bar.id}>
                           <section>
                             <h4>{bar.name}</h4>
-                            <button className="delete" onClick={(event) => handleDelete(event, 'bars', bar.id)}>Supprimer</button>
-                            <button className="modify"><Link to={`/admin/bars/update/${bar.id}`}>Modifier</Link></button>
+                            <button
+                              className="delete"
+                              onClick={(event) =>
+                                handleDelete(event, "bars", bar.id)
+                              }
+                            >
+                              Supprimer
+                            </button>
+                            <button className="modify">
+                              <Link to={`/admin/bars/update/${bar.id}`}>
+                                Modifier
+                              </Link>
+                            </button>
                           </section>
                         </article>
                       ))}
                     </>
                   )}
-
                   {filteredUsers.length > 0 && (
                     <>
                       {filteredUsers.map((user) => (
                         <article key={user.id}>
                           <section>
                             <h4>{user.username}</h4>
-                            <button className="delete" onClick={(event) => handleDelete(event, 'users', user.id)}>Supprimer</button>
-                            <button className="modify"><Link to={`/admin/users/update/${user.id}`}>Modifier</Link></button>
+                            <button
+                              className="delete"
+                              onClick={(event) =>
+                                handleDelete(event, "users", user.id)
+                              }
+                            >
+                              Supprimer
+                            </button>
+                            <button className="modify">
+                              <Link to={`/admin/users/update/${user.id}`}>
+                                Modifier
+                              </Link>
+                            </button>
                           </section>
                         </article>
                       ))}
                     </>
                   )}
-
                   {filteredTournaments.length > 0 && (
                     <>
                       {filteredTournaments.map((tournament) => (
                         <article key={tournament.id}>
                           <section>
                             <h4>{tournament.name}</h4>
-                            <button className="delete" onClick={(event) => handleDelete(event, 'tournaments', tournament.id)}>Supprimer</button>
-                            <button className="modify"><Link to={`/admin/tournaments/update/${tournament.id}`}>Modifier</Link></button>
+                            <button
+                              className="delete"
+                              onClick={(event) =>
+                                handleDelete(
+                                  event,
+                                  "tournaments",
+                                  tournament.id
+                                )
+                              }
+                            >
+                              Supprimer
+                            </button>
+                            <button className="modify">
+                              <Link to={`/admin/tournaments/update/${tournament.id}`}>
+                                Modifier
+                              </Link>
+                            </button>
                           </section>
                         </article>
                       ))}
@@ -121,7 +177,6 @@ const AdminDashboard = () => {
                 </>
               )}
             </section>
-          </div>
         </main>
       ) : (
         useEffect(() => {

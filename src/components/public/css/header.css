@@ -114,12 +114,33 @@ nav {
   background-image: url(../../public/images/header/login_icon.svg);
 }
 
+.login a {
+  display: block;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+}
+
 .profile {
   background-image: url(../../public/images/header/profile.svg);
 }
 
+.profile a {
+  display: block;
+  height: 30px;
+  width: 30px;
+  padding: 0;
+}
+
 .logout {
   background-image: url(../../public/images/header/logout.svg);
+}
+
+.logout a {
+  display: block;
+  height: 30px;
+  width: 30px;
+  padding: 0;
 }
 
 .menu section {
@@ -229,10 +250,6 @@ nav {
 
   .menu.show {
     height: calc(55vh);
-  }
-
-  .menu.show li{
-    margin: 1rem;
   }
 
   .menu a, .menu button {

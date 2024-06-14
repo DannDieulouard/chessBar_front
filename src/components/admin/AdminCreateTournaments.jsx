@@ -12,13 +12,15 @@ const AdminCreateTournaments = () => {
         event.preventDefault();
 
         const name = event.target.name.value;
+        const city = event.target.city.value;
         const game_day = event.target.game_day.value;
         const game_time = event.target.game_time.value;
     
         const tournamentData = {
           name: name,
+          city: city,
           game_day: game_day,
-          game_time: game_time
+          game_time: game_time,
         };
     
         const tournamentDataJson = JSON.stringify(tournamentData);
@@ -60,6 +62,12 @@ const AdminCreateTournaments = () => {
             </div>
             <div className="input-group">
               <label>
+                Métropole de rattachement
+                <input type="text" name="city" />
+              </label>
+            </div>
+            <div className="input-group">
+              <label>
                 Jour de jeu
                 <input type="text" name="game_day" />
               </label>
@@ -70,41 +78,6 @@ const AdminCreateTournaments = () => {
                 <input type="text" name="game_time"/>
               </label>
               </div>
-              <div className="input-group">
-          <label>
-              Joueur 1
-              <input type="text" name="player_1"/>
-          </label>
-          </div>
-          <div className="input-group">
-          <label>
-              Joueur 2
-              <input type="text" name="player_2"/>
-          </label>
-          </div>          <div className="input-group">
-          <label>
-              Joueur 3
-              <input type="text" name="player_3"/>
-          </label>
-          </div>
-          <div className="input-group">
-          <label>
-              Joueur 4
-              <input type="text" name="player_4"/>
-          </label>
-          </div>          
-          <div className="input-group">
-          <label>
-              Joueur 5
-              <input type="text" name="player_5"/>
-          </label>
-          </div>          
-          <div className="input-group">
-          <label>
-              Joueur 6
-              <input type="text" name="player_6"/>
-          </label>
-          </div>
             <button className="Create" type="submit">Créer</button>
           </form>
           </div>

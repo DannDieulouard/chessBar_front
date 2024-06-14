@@ -1,7 +1,7 @@
 .flex_dashboard {
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-content: center;
     align-items: flex-start;
     flex-wrap: nowrap;
@@ -12,7 +12,7 @@
     justify-content: space-around;
     align-content: flex-start;
     flex-wrap: wrap;
-    margin: 0 100px;
+    margin: 0 50px;
     height: auto;
 }
 
@@ -86,6 +86,53 @@
     border: 1px solid #ccc;
     border-radius: 4px;
   }
+
+  .flex_dashboard {
+    display: flex;
+  }
+  
+  aside {
+    width: 250px; /* Adjust width as needed */
+    background-color: #BE9472;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+  }
+
+  .kpi-container {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 20px;
+  }
+  
+  .kpi-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 200px; /* Adjust width as needed */
+  }
+  
+  .kpi-card h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .kpi-card p {
+    font-size: 1rem;
+    color: #888;
+    margin: 0;
+  }
+  
+  .flex_list {
+    flex: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
   
   @media (max-width: 768px) {
     .search-bar input {
@@ -96,5 +143,8 @@
   @media (max-width: 480px) {
     .search-bar input {
       width: 30%;
+    }
+    .kpi-card {
+      width: auto;
     }
   }

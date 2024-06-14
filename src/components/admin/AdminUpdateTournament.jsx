@@ -73,6 +73,12 @@ const UpdateTournament = () => {
             </label>
           </div>
           <div className="input-group">
+            <label>
+              Métropole de rattachement
+              <input type="text" name="city" defaultValue={tournament.city} />
+            </label>
+          </div>
+          <div className="input-group">
           <label>
               Jour de jeu
               <input type="text" name="game_day" defaultValue={tournament.game_day} />
@@ -86,34 +92,8 @@ const UpdateTournament = () => {
           </div>
           <div className="input-group">
           <label>
-              Joueur 1
-              <input type="text" name="player_1" defaultValue={tournament.player_1} />
-          </label>
-          </div>
-          <div className="input-group">
-          <label>
-              Joueur 2
-              <input type="text" name="player_2" defaultValue={tournament.player_2} />
-          </label>
-          </div>          <div className="input-group">
-          <label>
-              Joueur 3
-              <input type="text" name="player_3" defaultValue={tournament.player_3} />
-          </label>
-          </div>          <div className="input-group">
-          <label>
-              Joueur 4
-              <input type="text" name="player_4" defaultValue={tournament.player_4} />
-          </label>
-          </div>          <div className="input-group">
-          <label>
-              Joueur 5
-              <input type="text" name="player_5" defaultValue={tournament.player_5} />
-          </label>
-          </div>          <div className="input-group">
-          <label>
-              Joueur 6
-              <input type="text" name="player_6" defaultValue={tournament.player_6} />
+              Joueurs
+              <input type="text" name="players" defaultValue={tournament.players}/>
           </label>
           </div>
           <button className="Update" type="submit">Mettre à jour</button>
