@@ -33,22 +33,25 @@ Ensure you have the following software installed:
    git clone https://github.com/yourusername/chessBar_front.git
 
 2. Navigate to the project directory:
+   ```sh
     cd chessBar_front
 
 3. Install the dependencies:
+   ```sh
     npm install
 
 ### Running the Application
 
 1. To start the development server, run:
+   ```sh
     npm start
 
-2. Open your web browser and navigate to http://localhost:3000 to see the application running.
+3. Open your web browser and navigate to http://localhost:3000 to see the application running.
 
 ### Project Structure
 
 The project structure is as follows:
-
+```sh
 chessBar_front/
 ├── public/
 │   ├── index.html
@@ -113,15 +116,15 @@ We welcome contributions! Please follow these steps to contribute:
 
 1. Fork the repository.
 2. Create a new branch:
-
+```sh
 git checkout -b feature/chessBar_front
 
 3. Make your changes and commit them:
-
+```sh
 git commit -m 'Add some feature'
 
 4. Make your changes and commit them:
-
+```sh
 git push origin feature/your-feature-name
 
 5. Open a pull request.
